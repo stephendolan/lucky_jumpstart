@@ -20,6 +20,7 @@ abstract class AuthLayout
 
       body do
         m Shared::FlashMessages, context.flash
+        m Shared::GuestNavbar
         content
       end
     end
