@@ -4,7 +4,7 @@ This is a template project for web applications using [Lucky](https://luckyframe
 
 ### How to use it?
 
-- Click the big green "Use this template" button on the [GitHub Repository](https://stephendolan/lucky_jumpstart)
+- Click [this link](https://github.com/stephendolan/lucky_jumpstart/generate)
 - Replace every instance of `my_app` with your application name, for example:
   - `mv src/my_app.cr src/{your_app}.cr`
   - `rg my_app | xargs sed -i '' s/my_app/{your_app}/g`
