@@ -1,7 +1,7 @@
 class PasswordResetRequests::Create < BrowserAction
   include Auth::RedirectSignedInUsers
 
-  route do
+  post "/password_reset_requests" do
     RequestPasswordReset.new(params).submit do |operation, user|
       if user
         PasswordResetRequestEmail.new(user).deliver
