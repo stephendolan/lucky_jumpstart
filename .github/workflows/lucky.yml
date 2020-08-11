@@ -1,0 +1,78 @@
+name: Crystal CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      LUCKY_ENV: test
+      DB_HOST: postgres
+      SKIP_LUCKY_TASK_PRECOMPILATION: 1
+
+    container:
+      image: stephendolan/lucky:latest
+
+    services:
+      postgres:
+        image: postgres:12-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Crystal Ameba Linter
+        uses: crystal-ameba/github-action@v0.2.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Set up Yarn cache
+        uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Set up Crystal cache
+        uses: actions/cache@v1
+        id: crystal-cache
+        with:
+          path: lib
+          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-crystal-
+
+      - name: Crystal format check
+        run: crystal tool format --check
+
+      - name: Install shards
+        run: shards install
+
+      - name: Install yarn packages
+        run: yarn install
+
+      - name: Prettier check
+        run: yarn run prettier --check src/**/*.{js,ts}
+
+      - name: Run Lucky setup script
+        run: ./script/setup
+
+      - name: Run tests
+        run: crystal spec

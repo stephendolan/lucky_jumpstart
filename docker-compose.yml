@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - target: 5432
+        published: 5432
+    volumes:
+      - type: volume
+        source: postgres_data_my_app
+        target: /var/lib/postgresql/data
+
+volumes:
+  postgres_data_my_app:
