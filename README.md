@@ -7,7 +7,10 @@ This is a template project for web applications using [Lucky](https://luckyframe
 - Click [this link](https://github.com/stephendolan/lucky_jumpstart/generate)
 - Replace every instance of `my_app` with your application name, for example:
   - `mv src/my_app.cr src/{your_app}.cr`
-  - `rg my_app | xargs sed -i '' s/my_app/{your_app}/g`
+  - `rg my_app -l | xargs sed -i '' 's/my_app/{your_app}/g'`
+- Run `./script/setup`
+- Run `docker-compose up`
+- Run `lucky dev`
 
 ### Why use a template?
 
@@ -17,28 +20,28 @@ There are quite a few things I find myself adding to every Lucky application out
 
 #### Development
 
-- 🐳  A [DockerCompose](https://docs.docker.com/compose/) file for running your application database
+- 🐳 &nbsp; A [DockerCompose](https://docs.docker.com/compose/) file for running your application database
 
 #### Dependencies
 
-- 💎  Up-to-date Crystal dependencies
-- 🧶  Up-to-date Yarn dependencies
+- 💎 &nbsp; Up-to-date Crystal dependencies
+- 🧶 &nbsp; Up-to-date Yarn dependencies
 
 #### Tooling
 
-- 😽  [TailwindCSS](https://tailwindcss.com) for better styling
-- 😻  [TailwindUI](https://tailwindui.com) for fancy components
-- 🎉  [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
-- 🚀  [TypeScript](https://typescript.org) for keeping JavaScript cleaner
+- 😽 &nbsp; [TailwindCSS](https://tailwindcss.com) for better styling
+- 😻 &nbsp; [TailwindUI](https://tailwindui.com) for fancy components
+- 🎉 &nbsp; [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
+- 🚀 &nbsp; [TypeScript](https://typescript.org) for keeping JavaScript cleaner
 
 #### CI/CD
 
-- 🐳  A Dockerfile that can run LuckyFlow specs
-- 🤖  A handy dandy [Dependabot](https://dependabot.com/) configuration file
+- 🐳 &nbsp; A Dockerfile that can run LuckyFlow specs
+- 🤖 &nbsp; A handy dandy [Dependabot](https://dependabot.com/) configuration file
 
 - A working GitHub Actions workflow with:
 
-  - 💃  [Prettier](https://prettier.io/)
-  - 💎  Crystal Format
-  - 🦠  [Ameba](https://github.com/crystal-ameba/ameba)
-  - 👓  [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
+  - 💃 &nbsp; [Prettier](https://prettier.io/)
+  - 💎 &nbsp; Crystal Format
+  - 🦠 &nbsp; [Ameba](https://github.com/crystal-ameba/ameba)
+  - 👓 &nbsp; [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
