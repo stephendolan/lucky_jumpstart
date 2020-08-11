@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "lib": ["es6", "dom"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "*": ["node_modules/*", "app/js/*"]
+    },
+    "sourceMap": true,
+    "target": "es5",
+    "strict": true,
+    "alwaysStrict": true
+  },
+  "exclude": ["node_modules", "lib", "public"],
+  "compileOnSave": false
+}

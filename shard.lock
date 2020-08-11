@@ -1,0 +1,102 @@
+version: 2.0
+shards:
+  authentic:
+    git: https://github.com/luckyframework/authentic.git
+    version: 0.6.1
+
+  avram:
+    git: https://github.com/luckyframework/avram.git
+    version: 0.16.1
+
+  bindata:
+    git: https://github.com/spider-gazelle/bindata.git
+    version: 1.5.6
+
+  blank:
+    git: https://github.com/kostya/blank.git
+    version: 0.1.0
+
+  carbon:
+    git: https://github.com/luckyframework/carbon.git
+    version: 0.1.2
+
+  cry:
+    git: https://github.com/luckyframework/cry.git
+    version: 0.4.2
+
+  crystar:
+    git: https://github.com/naqvis/crystar.git
+    version: 0.1.7
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.9.0
+
+  dexter:
+    git: https://github.com/luckyframework/dexter.git
+    version: 0.3.1
+
+  dotenv:
+    git: https://github.com/gdotdesign/cr-dotenv.git
+    version: 0.7.0
+
+  exception_page:
+    git: https://github.com/crystal-loot/exception_page.git
+    version: 0.1.4
+
+  future:
+    git: https://github.com/crystal-community/future.cr.git
+    version: 0.1.0
+
+  habitat:
+    git: https://github.com/luckyframework/habitat.git
+    version: 0.4.4
+
+  jwt:
+    git: https://github.com/crystal-community/jwt.git
+    version: 1.4.2
+
+  lucky:
+    git: https://github.com/luckyframework/lucky.git
+    version: 0.23.0
+
+  lucky_cli:
+    git: https://github.com/luckyframework/lucky_cli.git
+    version: 0.23.1
+
+  lucky_flow:
+    git: https://github.com/luckyframework/lucky_flow.git
+    version: 0.7.0
+
+  lucky_router:
+    git: https://github.com/luckyframework/lucky_router.git
+    version: 0.3.0
+
+  openssl_ext:
+    git: https://github.com/stakach/openssl_ext.git
+    version: 1.2.2
+
+  pg:
+    git: https://github.com/will/crystal-pg.git
+    version: 0.21.1
+
+  selenium:
+    git: https://github.com/matthewmcgarvey/selenium.cr.git
+    version: 0.6.0
+
+  shell-table:
+    git: https://github.com/luckyframework/shell-table.cr.git
+    version: 0.9.2+git.commit.078a04ea58ead5203bb435a3b5fff448ddabaeea
+
+  teeplate:
+    git: https://github.com/luckyframework/teeplate.git
+    version: 0.8.2
+
+  webdrivers:
+    git: https://github.com/matthewmcgarvey/webdrivers.cr.git
+    version: 0.3.0
+
+  wordsmith:
+    git: https://github.com/luckyframework/wordsmith.git
+    version: 0.2.0
+
