@@ -17,28 +17,28 @@ There are quite a few things I find myself adding to every Lucky application out
 
 #### Development
 
-- 🐳 A [DockerCompose](https://docs.docker.com/compose/) file for running your application database
+- 🐳  A [DockerCompose](https://docs.docker.com/compose/) file for running your application database
 
 #### Dependencies
 
-- 💎 Up-to-date Crystal dependencies
-- 🧶 Up-to-date Yarn dependencies
+- 💎  Up-to-date Crystal dependencies
+- 🧶  Up-to-date Yarn dependencies
 
 #### Tooling
 
-- 😽 [TailwindCSS](https://tailwindcss.com) for better styling
-- 😻 [TailwindUI](https://tailwindui.com) for fancy components
-- 🎉 [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
-- 🚀 [TypeScript](https://typescript.org) for keeping JavaScript cleaner
+- 😽  [TailwindCSS](https://tailwindcss.com) for better styling
+- 😻  [TailwindUI](https://tailwindui.com) for fancy components
+- 🎉  [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
+- 🚀  [TypeScript](https://typescript.org) for keeping JavaScript cleaner
 
 #### CI/CD
 
-- 🐳 A Dockerfile that can run LuckyFlow specs
-- 🤖 A handy dandy [Dependabot](https://dependabot.com/) configuration file
+- 🐳  A Dockerfile that can run LuckyFlow specs
+- 🤖  A handy dandy [Dependabot](https://dependabot.com/) configuration file
 
 - A working GitHub Actions workflow with:
 
-  - 💃 [Prettier](https://prettier.io/)
-  - 💎 Crystal Format
-  - 🦠 [Ameba](https://github.com/crystal-ameba/ameba)
-  - 👓 [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
+  - 💃  [Prettier](https://prettier.io/)
+  - 💎  Crystal Format
+  - 🦠  [Ameba](https://github.com/crystal-ameba/ameba)
+  - 👓  [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
