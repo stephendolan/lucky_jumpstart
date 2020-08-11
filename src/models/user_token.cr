@@ -14,7 +14,7 @@ class UserToken
   end
 
   def self.decode_user_id(token : String) : Int64?
-    payload, _header = JWT.decode(token, Lucky::Server.settings.secret_key_base, ALGORITHM)
+    payload, _ = JWT.decode(token, Lucky::Server.settings.secret_key_base, ALGORITHM)
     payload["user_id"].to_s.to_i64
   rescue e : JWT::Error
     Lucky::Log.dexter.error { {jwt_decode_error: e.message} }
