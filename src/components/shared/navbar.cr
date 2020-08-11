@@ -19,7 +19,7 @@ class Shared::Navbar < BaseComponent
             link user.email, to: Me::Show, class: "text-sm font-medium text-color-gray-900 hover:text-gray-600"
 
             span class: "inline-flex rounded-md shadow-sm" do
-              link "Sign out", to: SignIns::Delete, class: "inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+              link "Sign out", to: SignIns::Delete, class: "inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150", flow_id: "sign-out-button"
             end
           end
 
