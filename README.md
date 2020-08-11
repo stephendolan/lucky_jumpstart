@@ -2,6 +2,8 @@
 
 This is a template project for web applications using [Lucky](https://luckyframework.org).
 
+![Crystal CI](https://github.com/stephendolan/lucky_jumpstart/workflows/Crystal%20CI/badge.svg)
+
 ### How to use it?
 
 - Click [this link](https://github.com/stephendolan/lucky_jumpstart/generate)
