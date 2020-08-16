@@ -15,3 +15,8 @@ print_done
 notice "Installing node dependencies"
 rg my_app -l | xargs sed -i "" "s/my_app/$NEW_APP_NAME/g"
 print_done
+
+notice "Committing changes to git"
+git add .
+git commit -m "Renaming application to $NEW_APP_NAME"
+print_done
