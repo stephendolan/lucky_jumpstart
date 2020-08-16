@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Exit if any subcommand fails
+set -e
+set -o pipefail
+
+source script/helpers/text_helpers
+
+NEW_APP_NAME=$1
+
+notice "Renaming 'src/my_app.cr'"
+mv src/my_app.cr src/$NEW_APP_NAME.cr
+print_done
+
+notice "Installing node dependencies"
+rg my_app -l | xargs sed -i "" "s/my_app/$NEW_APP_NAME/g"
+print_done
