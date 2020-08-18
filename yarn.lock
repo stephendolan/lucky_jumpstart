@@ -6628,9 +6628,9 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.6.2.tgz#352da9e1b0d9154c95ce12483daa1c2fa1f1eea8"
+tailwindcss@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.6.3.tgz#92a759eaaeeafcde8167a3c3fac4018d59ba5892"
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.1.2"
     autoprefixer "^9.4.5"
