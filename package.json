@@ -31,6 +31,6 @@
     "sass-loader": "^9.0.3",
     "ts-loader": "^8.0.2",
     "typescript": "^3.9.7",
-    "vue-template-compiler": "^2.5.22"
+    "vue-template-compiler": "^2.6.12"
   }
 }
