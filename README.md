@@ -12,7 +12,6 @@ This is a template project for web applications using [Lucky](https://luckyframe
   - `rg my_app -l | xargs sed -i '' 's/my_app/your_app/g'`
   - You can also simply run `./script/rename_template_app your_app`
 - Run `./script/setup`
-- Run `docker-compose up`
 - Run `lucky dev`
 
 ### Why use a template?
@@ -23,7 +22,7 @@ There are quite a few things I find myself adding to every Lucky application out
 
 #### Development
 
-- 🐳 &nbsp; A [DockerCompose](https://docs.docker.com/compose/) file for running your application database
+- 🐳 &nbsp; A [DockerCompose](https://docs.docker.com/compose/) file for running your application database, included in `Procfile.dev`
 
 #### Dependencies
 
