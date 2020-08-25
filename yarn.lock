@@ -850,16 +850,26 @@
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.15.2.tgz#927997342bb9f4a5185a86e6579a0a18afc33b0a"
 
-"@typescript-eslint/eslint-plugin@^3.9.1":
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-3.9.1.tgz#8cf27b6227d12d66dd8dc1f1a4b04d1daad51c2e"
+"@typescript-eslint/eslint-plugin@^3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-3.10.0.tgz#40fd53e81639c0d1a515b44e5fdf4c03dfd3cd39"
   dependencies:
-    "@typescript-eslint/experimental-utils" "3.9.1"
+    "@typescript-eslint/experimental-utils" "3.10.0"
     debug "^4.1.1"
     functional-red-black-tree "^1.0.1"
     regexpp "^3.0.0"
     semver "^7.3.2"
     tsutils "^3.17.1"
+
+"@typescript-eslint/experimental-utils@3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-3.10.0.tgz#f97a669a84a78319ab324cd51169d0c52853a360"
+  dependencies:
+    "@types/json-schema" "^7.0.3"
+    "@typescript-eslint/types" "3.10.0"
+    "@typescript-eslint/typescript-estree" "3.10.0"
+    eslint-scope "^5.0.0"
+    eslint-utils "^2.0.0"
 
 "@typescript-eslint/experimental-utils@3.9.1":
   version "3.9.1"
@@ -881,9 +891,26 @@
     "@typescript-eslint/typescript-estree" "3.9.1"
     eslint-visitor-keys "^1.1.0"
 
+"@typescript-eslint/types@3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-3.10.0.tgz#b81906674eca94a884345ba0bc1aaf6cd4da912a"
+
 "@typescript-eslint/types@3.9.1":
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-3.9.1.tgz#b2a6eaac843cf2f2777b3f2464fb1fbce5111416"
+
+"@typescript-eslint/typescript-estree@3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-3.10.0.tgz#65df13579a5e53c12afb4f1c5309589e3855a5de"
+  dependencies:
+    "@typescript-eslint/types" "3.10.0"
+    "@typescript-eslint/visitor-keys" "3.10.0"
+    debug "^4.1.1"
+    glob "^7.1.6"
+    is-glob "^4.0.1"
+    lodash "^4.17.15"
+    semver "^7.3.2"
+    tsutils "^3.17.1"
 
 "@typescript-eslint/typescript-estree@3.9.1":
   version "3.9.1"
@@ -897,6 +924,12 @@
     lodash "^4.17.15"
     semver "^7.3.2"
     tsutils "^3.17.1"
+
+"@typescript-eslint/visitor-keys@3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-3.10.0.tgz#6c0cac867e705a42e2c71b359bf6a10a88a28985"
+  dependencies:
+    eslint-visitor-keys "^1.1.0"
 
 "@typescript-eslint/visitor-keys@3.9.1":
   version "3.9.1"
