@@ -63,7 +63,7 @@ class Shared::Navbar < BaseComponent
   end
 
   private def render_right_navbar(user : User)
-    div class: "hidden md:flex md:space-x-2 items-center" do
+    div class: "hidden sm:flex md:space-x-2 items-center" do
       link user.email, to: Me::Show, class: "text-sm font-medium text-color-gray-900 hover:text-gray-600"
 
       span class: "inline-flex rounded-md shadow-sm" do
