@@ -49,16 +49,16 @@ class Shared::Navbar < BaseComponent
 
   private def render_hamburger_menu(user : User)
     div class: "pt-2 pb-3" do
-      link "Home", to: Home::Index, class: "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-      link "Sign out", to: SignIns::Delete, class: "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
+      m UI::NavbarHamburgerButton, &.link("Home", to: Home::Index)
+      m UI::NavbarHamburgerButton, &.link("Sign out", to: SignIns::Delete)
     end
   end
 
   private def render_hamburger_menu(user : Nil)
     div class: "pt-2 pb-3" do
-      link "Home", to: Home::Index, class: "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-      link "Sign in", to: SignIns::New, class: "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-      link "Sign up", to: SignUps::New, class: "mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
+      m UI::NavbarHamburgerButton, &.link("Home", to: Home::Index)
+      m UI::NavbarHamburgerButton, &.link("Sign in", to: SignIns::New)
+      m UI::NavbarHamburgerButton, &.link("Sign up", to: SignUps::New)
     end
   end
 
@@ -66,20 +66,14 @@ class Shared::Navbar < BaseComponent
     div class: "hidden sm:flex md:space-x-2 items-center" do
       link user.email, to: Me::Show, class: "text-sm font-medium text-color-gray-900 hover:text-gray-600"
 
-      span class: "inline-flex rounded-md shadow-sm" do
-        link "Sign out", to: SignIns::Delete, class: "inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150", flow_id: "sign-out-button"
-      end
+      m UI::Button, &.link("Sign Out", to: SignIns::Delete)
     end
   end
 
   private def render_right_navbar(no_user : Nil)
     div class: "hidden md:flex md:space-x-2 items-center" do
-      span class: "inline-flex rounded-md shadow-sm" do
-        link "Sign in", to: SignIns::New, class: "inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-      end
-      span class: "inline-flex rounded-md shadow-sm" do
-        link "Sign up", to: SignUps::New, class: "inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-      end
+      m UI::Button, &.link("Sign In", to: SignIns::New)
+      m UI::Button, &.link("Sign Out", to: SignIns::Delete)
     end
   end
 end
