@@ -12,11 +12,11 @@ abstract class MainLayout
     html_doctype
 
     html lang: "en" do
-      m Shared::LayoutHead, page_title: page_title, context: context
+      mount Shared::LayoutHead, page_title: page_title, context: context
 
       body class: "min-h-screen bg-gray-100" do
-        m Shared::FlashMessages, context.flash
-        m Shared::Navbar, user: current_user
+        mount Shared::FlashMessages, context.flash
+        mount Shared::Navbar, user: current_user
 
         main do
           div class: "max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" do

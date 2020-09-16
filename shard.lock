@@ -2,11 +2,11 @@ version: 2.0
 shards:
   authentic:
     git: https://github.com/luckyframework/authentic.git
-    version: 0.6.1
+    version: 0.7.0
 
   avram:
     git: https://github.com/luckyframework/avram.git
-    version: 0.16.1
+    version: 0.17.0
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git
@@ -58,11 +58,11 @@ shards:
 
   lucky:
     git: https://github.com/luckyframework/lucky.git
-    version: 0.23.0
+    version: 0.24.0
 
   lucky_cli:
     git: https://github.com/luckyframework/lucky_cli.git
-    version: 0.23.1
+    version: 0.24.0
 
   lucky_flow:
     git: https://github.com/luckyframework/lucky_flow.git
@@ -70,7 +70,7 @@ shards:
 
   lucky_router:
     git: https://github.com/luckyframework/lucky_router.git
-    version: 0.3.0
+    version: 0.3.1
 
   openssl_ext:
     git: https://github.com/stakach/openssl_ext.git
@@ -79,6 +79,10 @@ shards:
   pg:
     git: https://github.com/will/crystal-pg.git
     version: 0.21.1
+
+  pulsar:
+    git: https://github.com/luckyframework/pulsar.git
+    version: 0.2.1
 
   selenium:
     git: https://github.com/matthewmcgarvey/selenium.cr.git
@@ -98,5 +102,5 @@ shards:
 
   wordsmith:
     git: https://github.com/luckyframework/wordsmith.git
-    version: 0.2.0
+    version: 0.2.1
 

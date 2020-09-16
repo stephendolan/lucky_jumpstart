@@ -7,7 +7,7 @@ class PasswordResets::NewPage < AuthLayout
   end
 
   def content
-    m Shared::CenteredFormPanel, title: title_text do
+    mount Shared::CenteredFormPanel, title: title_text do
       render_form(operation)
     end
   end
@@ -15,8 +15,8 @@ class PasswordResets::NewPage < AuthLayout
   private def render_form(op)
     form_for PasswordResets::Create.with(user_id) do
       div class: "space-y-6" do
-        m Shared::Field, op.password, "Password", &.password_input(autofocus: "true")
-        m Shared::Field, op.password_confirmation, "Confirm Password", &.password_input
+        mount Shared::Field, op.password, "Password", &.password_input(autofocus: "true")
+        mount Shared::Field, op.password_confirmation, "Confirm Password", &.password_input
       end
 
       div class: "mt-6" do

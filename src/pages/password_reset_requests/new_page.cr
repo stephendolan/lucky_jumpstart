@@ -6,14 +6,14 @@ class PasswordResetRequests::NewPage < AuthLayout
   end
 
   def content
-    m Shared::CenteredFormPanel, title: title_text do
+    mount Shared::CenteredFormPanel, title: title_text do
       render_form(operation)
     end
   end
 
   private def render_form(op)
     form_for PasswordResetRequests::Create do
-      m Shared::Field, op.email, "Email", &.email_input(autofocus: "true", placeholder: "you@example.com")
+      mount Shared::Field, op.email, "Email", &.email_input(autofocus: "true", placeholder: "you@example.com")
 
       div class: "mt-6" do
         span class: "block w-full rounded-md shadow-sm" do
