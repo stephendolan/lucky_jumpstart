@@ -6,13 +6,13 @@
 # ## Basic usage:
 #
 #    # Renders a text input by default and will guess the label name "Name"
-#    m Shared::Field, op.name
+#    mount Shared::Field, op.name
 #    # Call any of the input methods on the block
-#    m Shared::Field, op.email, &.email_input
+#    mount Shared::Field, op.email, &.email_input
 #    # Add other HTML attributes
-#    m Shared::Field, op.email, &.email_input(autofocus: "true")
+#    mount Shared::Field, op.email, &.email_input(autofocus: "true")
 #    # Pass an explicit label name
-#    m Shared::Field, op.username, "Your username"
+#    mount Shared::Field, op.username, "Your username"
 #
 # ## Customization
 #
@@ -22,7 +22,7 @@
 #    div class: "field-wrapper"
 #      label_for field
 #      yield field
-#      m Shared::FieldErrors, field
+#      mount Shared::FieldErrors, field
 #    end
 #
 # You may also want to have more components if your fields look
@@ -37,7 +37,7 @@ class Shared::Field(T) < BaseComponent
 
   def render
     div do
-      m Shared::FieldLabel, attribute, label_text
+      mount Shared::FieldLabel, attribute, label_text
 
       div class: "mt-1 relative rounded-md shadow-sm" do
         with_defaults field: attribute, class: input_classes do |input_builder|
@@ -47,7 +47,7 @@ class Shared::Field(T) < BaseComponent
         render_warning_symbol unless attribute.valid?
       end
 
-      m Shared::FieldErrors, attribute
+      mount Shared::FieldErrors, attribute
     end
   end
 
