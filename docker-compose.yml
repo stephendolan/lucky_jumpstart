@@ -10,8 +10,8 @@ services:
         published: 5432
     volumes:
       - type: volume
-        source: postgres_data_my_app
+        source: postgres_data_lucky_jumpstart
         target: /var/lib/postgresql/data
 
 volumes:
-  postgres_data_my_app:
+  postgres_data_lucky_jumpstart:

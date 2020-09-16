@@ -1,7 +1,7 @@
 require "./server"
 
 Lucky::Session.configure do |settings|
-  settings.key = "_my_app_session"
+  settings.key = "_lucky_jumpstart_session"
 end
 
 Lucky::CookieJar.configure do |settings|
