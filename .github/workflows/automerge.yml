@@ -10,4 +10,6 @@ jobs:
     steps:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2.0.4
         with:
+          # This needs to be set manually to an access token
+          # with push permissions in your repository "Secrets" settings
           github-token: ${{ secrets.AUTO_MERGE_TOKEN }}
