@@ -8,6 +8,6 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2.0.4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
