@@ -66,7 +66,7 @@ jobs:
         run: shards install
 
       - name: Install yarn packages
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Prettier check
         run: yarn run prettier --check src/**/*.{js,ts}
