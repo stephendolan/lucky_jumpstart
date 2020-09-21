@@ -1,12 +1,12 @@
-name: my_app
+name: lucky_jumpstart
 version: 0.1.0
 
 authors:
   - your-name-here <your-email-here>
 
 targets:
-  my_app:
-    main: src/my_app.cr
+  lucky_jumpstart:
+    main: src/lucky_jumpstart.cr
 
 crystal: 0.35.0
 
