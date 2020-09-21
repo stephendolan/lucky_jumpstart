@@ -1,3 +1,3 @@
-<h1>Please reset your password</h1>
+<h1>Please reset your password for <%= Application.settings.name %></h1>
 
 <a href="<%= PasswordResets::New.url(@user.id, @token) %>">Reset password</a>
