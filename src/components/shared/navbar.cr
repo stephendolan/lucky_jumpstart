@@ -54,7 +54,7 @@ class Shared::Navbar < BaseComponent
     end
   end
 
-  private def render_hamburger_menu(user : Nil)
+  private def render_hamburger_menu(no_user : Nil)
     div class: "pt-2 pb-3" do
       mount UI::NavbarHamburgerButton, &.link("Home", to: Home::Index)
       mount UI::NavbarHamburgerButton, &.link("Sign in", to: SignIns::New)
@@ -63,7 +63,7 @@ class Shared::Navbar < BaseComponent
   end
 
   private def render_right_navbar(user : User)
-    div class: "hidden sm:flex md:space-x-2 items-center" do
+    div class: "hidden sm:flex sm:space-x-2 items-center" do
       link user.email, to: Me::Show, class: "text-sm font-medium text-color-gray-900 hover:text-gray-600"
 
       mount UI::Button, &.link("Sign Out", to: SignIns::Delete, flow_id: "sign-out-button")
@@ -71,9 +71,9 @@ class Shared::Navbar < BaseComponent
   end
 
   private def render_right_navbar(no_user : Nil)
-    div class: "hidden md:flex md:space-x-2 items-center" do
+    div class: "hidden sm:flex sm:space-x-2 items-center" do
       mount UI::Button, &.link("Sign In", to: SignIns::New)
-      mount UI::Button, &.link("Sign Out", to: SignIns::Delete, flow_id: "sign-out-button")
+      mount UI::Button, &.link("Sign Up", to: SignUps::New, flow_id: "sign-up-button")
     end
   end
 end
