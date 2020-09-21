@@ -2,7 +2,6 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@babel/compat-data": "^7.9.0",
     "@rails/ujs": "^6.0.0",
     "@tailwindcss/ui": "^0.6.2",
     "normalize-scss": "^7.0.1",
@@ -17,6 +16,7 @@
     "prod": "NODE_ENV=production yarn run webpack --progress --hide-modules --color --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "@babel/compat-data": "^7.9.0",
     "@types/node": "^14.11.1",
     "@types/webpack-env": "^1.15.3",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
@@ -30,7 +30,6 @@
     "sass": "1.26.11",
     "sass-loader": "^10.0.2",
     "ts-loader": "^8.0.4",
-    "typescript": "^4.0.3",
-    "vue-template-compiler": "^2.6.12"
+    "typescript": "^4.0.3"
   }
 }
