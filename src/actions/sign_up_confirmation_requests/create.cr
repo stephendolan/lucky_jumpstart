@@ -6,7 +6,7 @@ class SignUpConfirmationRequests::Create < BrowserAction
       if user
         if user.confirmed?
           SignUpAlreadyConfirmedEmail.new(user).deliver_later
-        else
+        elsif user.unconfirmed?
           SignUpConfirmationEmail.new(user).deliver_later
         end
       end
