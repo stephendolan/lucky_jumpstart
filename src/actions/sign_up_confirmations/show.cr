@@ -8,7 +8,7 @@ class SignUpConfirmations::Show < BrowserAction
     if user && user.confirmed?
       flash.info = "You've already confirmed your email! Please sign in."
       redirect to: SignIns::New
-    elsif user && !user.confirmed?
+    elsif user && user.unconfirmed?
       ConfirmSignUp.create(user, confirmed_at: Time.utc) do |operation, user|
         if user
           flash.success = "Your email has been confirmed"
