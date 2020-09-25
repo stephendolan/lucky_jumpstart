@@ -10,7 +10,7 @@ class AuthenticationFlow < BaseFlow
       email: email,
       password: password,
       password_confirmation: password
-    click "@sign-up-button"
+    sign_up_button.click
   end
 
   def sign_out
@@ -23,11 +23,15 @@ class AuthenticationFlow < BaseFlow
     fill_form SignInUser,
       email: email,
       password: password
-    click "@sign-in-button"
+    sign_in_button.click
   end
 
   def should_be_signed_in
     sign_out_button.should be_on_page
+  end
+
+  def should_be_on_sign_in_page
+    el("body", text: "Sign in").should be_on_page
   end
 
   def should_have_password_error
@@ -35,6 +39,14 @@ class AuthenticationFlow < BaseFlow
   end
 
   private def sign_out_button
-    el("@sign-out-button")
+    el("@nav-sign-out-button")
+  end
+
+  private def sign_in_button
+    el("@sign-in-button")
+  end
+
+  private def sign_up_button
+    el("@sign-up-button")
   end
 end
