@@ -29,10 +29,10 @@ class Marketing::IndexPage < AuthLayout
           end
           div class: "mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8" do
             div class: "rounded-md shadow" do
-              link "Sign up", to: SignUps::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+              link "Sign up", to: SignUps::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10", flow_id: "sign-up-button"
             end
             div class: "mt-3 rounded-md shadow sm:mt-0 sm:ml-3" do
-              link "Sign in", to: SignIns::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+              link "Sign in", to: SignIns::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10", flow_id: "sign-in-button"
             end
           end
         end
