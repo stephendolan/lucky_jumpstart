@@ -26,6 +26,11 @@ class AuthenticationFlow < BaseFlow
     sign_in_button.click
   end
 
+  def should_send_confirmation_email
+    user = UserQuery.new.email(email).first
+    SignUpConfirmationEmail.new(user).should be_delivered
+  end
+
   def should_be_signed_in
     sign_out_button.should be_on_page
   end

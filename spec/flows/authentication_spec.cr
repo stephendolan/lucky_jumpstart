@@ -6,6 +6,7 @@ describe "Authentication flow" do
 
     flow.sign_up "password"
     flow.should_be_on_sign_in_page
+    flow.should_send_confirmation_email
     flow.sign_in "wrong-password"
     flow.should_have_password_error
     flow.sign_in "password"
