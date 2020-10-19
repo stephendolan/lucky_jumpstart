@@ -42,7 +42,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Set up Yarn cache
-        uses: actions/cache@v2.1.1
+        uses: actions/cache@v2.1.2
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -51,7 +51,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Set up Crystal cache
-        uses: actions/cache@v2.1.1
+        uses: actions/cache@v2.1.2
         id: crystal-cache
         with:
           path: lib
