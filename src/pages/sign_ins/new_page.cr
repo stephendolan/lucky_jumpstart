@@ -30,6 +30,10 @@ class SignIns::NewPage < AuthLayout
         end
 
         div class: "text-sm leading-5" do
+          link "Resend confirmation", to: SignUpConfirmationRequests::New, class: link_class
+        end
+
+        div class: "text-sm leading-5" do
           link "Forgot your password?", to: PasswordResetRequests::New, class: link_class
         end
       end

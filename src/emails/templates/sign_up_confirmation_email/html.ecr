@@ -1,0 +1,10 @@
+<h3>Your email has been used to sign up for <a href="<%= Lucky::RouteHelper.settings.base_uri %>"><%= Application.settings.name %></a>!</h3>
+
+<p>Click on the link below to confirm your account:</p>
+<a href="<%= SignUpConfirmations::Show.url(token: @user.confirmation_token) %>">Click here</a>
+
+<p>If you can't click on that text, copy this url:</p>
+
+<p><%= SignUpConfirmations::Show.url(token: @user.confirmation_token) %></p>
+
+<p>If you didn't sign up for <% Application.settings.name %>, you can ignore this email.</p>

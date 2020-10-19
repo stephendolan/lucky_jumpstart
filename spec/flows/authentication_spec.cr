@@ -5,8 +5,8 @@ describe "Authentication flow" do
     flow = AuthenticationFlow.new("test@example.com")
 
     flow.sign_up "password"
-    flow.should_be_signed_in
-    flow.sign_out
+    flow.should_be_on_sign_in_page
+    flow.should_send_confirmation_email
     flow.sign_in "wrong-password"
     flow.should_have_password_error
     flow.sign_in "password"
@@ -27,5 +27,5 @@ describe "Authentication flow" do
 end
 
 private def should_be_signed_in(flow)
-  flow.el("@sign-out-button").should be_on_page
+  flow.el("@nav-sign-out-button").should be_on_page
 end

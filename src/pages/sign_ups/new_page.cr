@@ -27,7 +27,7 @@ class SignUps::NewPage < AuthLayout
 
       div class: "mt-6 text-center" do
         div class: "text-sm leading-5" do
-          link "Already have an account? Sign in!", to: SignIns::New, class: "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+          link "Already have an account? Sign in!", to: SignIns::New, class: "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150", flow_id: "sign-in-button"
         end
       end
     end

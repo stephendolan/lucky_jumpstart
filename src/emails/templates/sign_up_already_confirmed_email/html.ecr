@@ -1,0 +1,9 @@
+<h3>You requested a new confirmation email for your account on <%= Application.settings.name %> (<%= Lucky::RouteHelper.settings.base_uri %>), but your email is already confirmed!</h3>
+
+<p>You can sign in to your account with your email and password at the link below:</p>
+<a href="<%= SignIns::New.url %>">Click here</a>
+
+<p>If you can't click on that text, copy this url:</p>
+<p><%= SignIns::New.url %></p>
+
+<p>If you didn't request a confirmation, you can ignore this email.</p> 

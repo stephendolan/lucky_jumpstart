@@ -1,0 +1,6 @@
+Your email has been used to sign up for <%= Application.settings.name %> (<%= Lucky::RouteHelper.settings.base_uri %>)!
+
+Click on the link below to confirm your account:
+<%= SignUpConfirmations::Show.url(token: @user.confirmation_token) %>
+
+If you didn't sign up for <%= Application.settings.name %>, you can ignore this email.

@@ -49,16 +49,16 @@ class Shared::Navbar < BaseComponent
 
   private def render_hamburger_menu(user : User)
     div class: "pt-2 pb-3" do
-      mount UI::NavbarHamburgerButton, &.link("Home", to: Home::Index, flow_id: "home-button")
-      mount UI::NavbarHamburgerButton, &.link("Sign out", to: SignIns::Delete, flow_id: "sign-out-button")
+      mount UI::NavbarHamburgerButton, &.link("Home", to: Home::Index, flow_id: "nav-hamburger-home-button")
+      mount UI::NavbarHamburgerButton, &.link("Sign out", to: SignIns::Delete, flow_id: "nav-hamburger-sign-out-button")
     end
   end
 
   private def render_hamburger_menu(no_user : Nil)
     div class: "pt-2 pb-3" do
-      mount UI::NavbarHamburgerButton, &.link("Home", to: Home::Index, flow_id: "home-button")
-      mount UI::NavbarHamburgerButton, &.link("Sign in", to: SignIns::New, flow_id: "sign-in-button")
-      mount UI::NavbarHamburgerButton, &.link("Sign up", to: SignUps::New, flow_id: "sign-up-button")
+      mount UI::NavbarHamburgerButton, &.link("Home", to: Home::Index, flow_id: "nav-hamburger-home-button")
+      mount UI::NavbarHamburgerButton, &.link("Sign in", to: SignIns::New, flow_id: "nav-hamburger-sign-in-button")
+      mount UI::NavbarHamburgerButton, &.link("Sign up", to: SignUps::New, flow_id: "nav-hamburger-sign-up-button")
     end
   end
 
@@ -66,14 +66,14 @@ class Shared::Navbar < BaseComponent
     div class: "hidden sm:flex sm:space-x-2 items-center" do
       link user.email, to: Me::Show, class: "text-sm font-medium text-color-gray-900 hover:text-gray-600"
 
-      mount UI::Button, &.link("Sign Out", to: SignIns::Delete, flow_id: "sign-out-button")
+      mount UI::Button, &.link("Sign Out", to: SignIns::Delete, flow_id: "nav-sign-out-button")
     end
   end
 
   private def render_right_navbar(no_user : Nil)
     div class: "hidden sm:flex sm:space-x-2 items-center" do
-      mount UI::Button, &.link("Sign In", to: SignIns::New, flow_id: "sign-in-button")
-      mount UI::Button, &.link("Sign Up", to: SignUps::New, flow_id: "sign-up-button")
+      mount UI::Button, &.link("Sign In", to: SignIns::New, flow_id: "nav-sign-in-button")
+      mount UI::Button, &.link("Sign Up", to: SignUps::New, flow_id: "nav-sign-up-button")
     end
   end
 end

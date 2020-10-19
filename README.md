@@ -33,6 +33,10 @@ There are quite a few things I find myself adding to every Lucky application out
 - 🎉 &nbsp; [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
 - 🚀 &nbsp; [TypeScript](https://typescript.org) for keeping JavaScript cleaner
 
+#### Functionality
+
+- 📧 &nbsp; Email confirmation of users
+
 #### CI/CD
 
 - 🐳 &nbsp; A Dockerfile that can run LuckyFlow specs
