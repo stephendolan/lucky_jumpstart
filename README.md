@@ -48,3 +48,7 @@ There are quite a few things I find myself adding to every Lucky application out
   - 💎 &nbsp; Crystal Format
   - 🦠 &nbsp; [Ameba](https://github.com/crystal-ameba/ameba)
   - 👓 &nbsp; [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
+
+#### Deployment
+
+- 🌊 &nbsp; [Digital Ocean App Platform](https://www.digitalocean.com/docs/app-platform)
