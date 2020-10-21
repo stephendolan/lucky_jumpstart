@@ -9,12 +9,10 @@ jobs:
       image: crystallang/crystal:0.35.1
     steps:
       - uses: actions/checkout@v2
+
       - name: Format
         run: crystal tool format --check
-        
-  lint:
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Crystal Ameba Linter
         uses: crystal-ameba/github-action@v0.2.6
         env:
