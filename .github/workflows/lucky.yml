@@ -18,7 +18,7 @@ jobs:
       - name: Crystal Ameba Linter
         uses: crystal-ameba/github-action@v0.2.6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   specs:
     runs-on: ubuntu-latest
