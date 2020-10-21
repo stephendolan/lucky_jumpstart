@@ -11,6 +11,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: Format
         run: crystal tool format --check
+        
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Crystal Ameba Linter
+        uses: crystal-ameba/github-action@v0.2.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
 
   specs:
     runs-on: ubuntu-latest
