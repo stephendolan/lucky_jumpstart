@@ -9,7 +9,7 @@ on:
       - "*"
 
 jobs:
-  check-format:
+  CheckFormat:
     runs-on: ubuntu-latest
     container:
       image: crystallang/crystal:0.35.1
@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  specs:
+  RunSpecs:
     runs-on: ubuntu-latest
     container:
       image: crystallang/crystal:0.35.1
