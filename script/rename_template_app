@@ -13,11 +13,11 @@ mv src/lucky_jumpstart.cr src/$NEW_APP_NAME.cr
 print_done
 
 notice "Renaming instances of template 'lucky_jumpstart' value"
-rg lucky_jumpstart -l | xargs sed -i "" "s/lucky_jumpstart/$NEW_APP_NAME/g"
+grep --exclude-dir=script -rl "lucky_jumpstart" * | xargs sed -i "" "s/lucky_jumpstart/$NEW_APP_NAME/g"
 print_done
 
 notice "Renaming instances of template 'Lucky Jumpstart' value"
-rg "Lucky Jumpstart" -l | xargs sed -i "" "s/Lucky Jumpstart/$NEW_APP_NAME/g"
+grep --exclude-dir=script -rl "Lucky Jumpstart" * | xargs sed -i "" "s/Lucky Jumpstart/$NEW_APP_NAME/g"
 print_done
 
 notice "Committing changes to git"
