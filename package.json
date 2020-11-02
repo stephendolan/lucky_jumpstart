@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/ujs": "^6.0.0",
-    "@tailwindcss/ui": "^0.6.2",
+    "@tailwindcss/ui": "^0.7.0",
     "normalize-scss": "^7.0.1",
     "stimulus": "^1.1.1",
     "tailwindcss": "^1.9.6",
