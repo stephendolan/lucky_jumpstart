@@ -7,7 +7,7 @@ This is a template project for web applications using [Lucky](https://luckyframe
 ### How to use it?
 
 - Click [this link](https://github.com/stephendolan/lucky_jumpstart/generate)
-- Run `./script/rename_template_app your_app` to rename the template application
+- Run `./script/rename_template_app` to rename the template application
 - Run `./script/setup`
 - Run `lucky dev`
 
