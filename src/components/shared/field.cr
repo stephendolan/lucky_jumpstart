@@ -65,13 +65,15 @@ class Shared::Field(T) < BaseComponent
   end
 
   private def input_classes
-    base_classes = "form-input block w-full sm:text-sm sm:leading-5"
-    error_classes = "pr-10 border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red"
+    base_classes = "block w-full sm:text-sm rounded-md"
+
+    valid_classes = "#{base_classes} focus:ring-primary-500 focus:border-primary-500 border-gray-300"
+    error_classes = "#{base_classes} pr-10 border-red-300 text-red-700 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500"
 
     if attribute.valid?
-      base_classes
+      valid_classes
     else
-      [base_classes, error_classes].join(" ")
+      error_classes
     end
   end
 end
