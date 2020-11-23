@@ -54,3 +54,4 @@ There are quite a few things I find myself adding to every Lucky application out
 #### Deployment
 
 - 🌊 &nbsp; [Digital Ocean App Platform](https://www.digitalocean.com/docs/app-platform)
+- 👾 &nbsp; [Heroku](https://luckyframework.org/guides/deploying/heroku)
