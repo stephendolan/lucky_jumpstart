@@ -5,22 +5,39 @@ set -e
 set -o pipefail
 
 source script/helpers/text_helpers
+source script/helpers/function_helpers
 
 NEW_APP_NAME=$1
 
-notice "Renaming 'src/lucky_jumpstart.cr'"
-mv src/lucky_jumpstart.cr src/$NEW_APP_NAME.cr
+replace_text() {
+  OUTGOING=$1
+  INCOMING=$2
+
+  notice "Replacing '$1' with '$2'"
+
+  GREP_OPTIONS=( --exclude-dir={script,lib,tmp} --exclude=README.md -r -l )
+
+  if is_mac; then
+    grep ${GREP_OPTIONS[@]} "$OUTGOING" * | xargs sed -i "" "s/$OUTGOING/$INCOMING/g"
+  else
+    grep ${GREP_OPTIONS[@]} "$OUTGOING" * | xargs sed -i "s/$OUTGOING/$INCOMING/g"
+  fi
+}
+
+rename_file() {
+  OUTGOING=$1
+  INCOMING=$2
+
+  notice "Renaming '$1' to '$2'"
+
+  mv $1 $2
+}
+
+replace_text "lucky_jumpstart" $NEW_APP_NAME
 print_done
 
-notice "Renaming instances of template 'lucky_jumpstart' value"
-grep --exclude-dir=script -rl "lucky_jumpstart" * | xargs sed -i "" "s/lucky_jumpstart/$NEW_APP_NAME/g"
+replace_text "Lucky Jumpstart" $NEW_APP_NAME
 print_done
 
-notice "Renaming instances of template 'Lucky Jumpstart' value"
-grep --exclude-dir=script -rl "Lucky Jumpstart" * | xargs sed -i "" "s/Lucky Jumpstart/$NEW_APP_NAME/g"
-print_done
-
-notice "Committing changes to git"
-git add .
-git commit -m "Renaming application to $NEW_APP_NAME"
+rename_file src/lucky_jumpstart.cr src/$NEW_APP_NAME.cr
 print_done
