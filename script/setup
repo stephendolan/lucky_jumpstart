@@ -6,7 +6,6 @@ set -o pipefail
 
 source script/helpers/text_helpers
 
-
 notice "Running System Check"
 ./script/system_check
 print_done
@@ -28,6 +27,9 @@ if [ ! -f ".env" ]; then
   print_done
 fi
 
+notice "Spinning up Docker Compose"
+docker-compose up -d | indent
+
 notice "Creating the database"
 lucky db.create | indent
 
@@ -40,6 +42,9 @@ lucky db.migrate | indent
 notice "Seeding the database with required and sample records"
 lucky db.create_required_seeds | indent
 lucky db.create_sample_seeds | indent
+
+notice "Spinning down Docker Compose"
+docker-compose down | indent
 
 print_done
 notice "Run 'lucky dev' to start the app"
