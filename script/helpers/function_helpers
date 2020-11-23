@@ -57,6 +57,19 @@ is_linux() {
   fi
 }
 
+ask() {
+  QUESTION=$1
+
+  default=""
+  if [ -n "$2" ]; then
+    default=" [$2]"
+  fi
+
+  read -p "$1$default: " input
+  answer=${input:-$2}
+  echo "$answer"
+}
+
 # Prints error and exit.
 # example:
 #   print_error "Redis is not running. Run it with some_command"

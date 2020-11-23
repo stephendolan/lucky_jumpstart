@@ -7,8 +7,6 @@ set -o pipefail
 source script/helpers/text_helpers
 source script/helpers/function_helpers
 
-NEW_APP_NAME=$1
-
 replace_text() {
   OUTGOING=$1
   INCOMING=$2
@@ -33,11 +31,14 @@ rename_file() {
   mv $1 $2
 }
 
-replace_text "lucky_jumpstart" $NEW_APP_NAME
+APP_NAME_CODE=$(ask "What application name should replace 'lucky_jumpstart'?")
+APP_NAME_HUMAN=$(ask "What application name should replace 'Lucky Jumpstart'?" "$APP_NAME_CODE")
+
+replace_text "lucky_jumpstart" "$APP_NAME_CODE"
 print_done
 
-replace_text "Lucky Jumpstart" $NEW_APP_NAME
+replace_text "Lucky Jumpstart" "$APP_NAME_HUMAN"
 print_done
 
-rename_file src/lucky_jumpstart.cr src/$NEW_APP_NAME.cr
+rename_file src/lucky_jumpstart.cr src/"$APP_NAME_CODE".cr
 print_done
