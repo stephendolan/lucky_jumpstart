@@ -1,16 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: [
-    "./src/css/**/*.scss",
+    "./src/css/**/*.css",
     "./src/pages/**/*.cr",
     "./src/components/**/*.cr",
     "./src/js/controllers/*.ts",
   ],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -18,6 +15,12 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [require("@tailwindcss/ui")],
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };

@@ -12,29 +12,29 @@ let plugins = [];
 const tailwindcss = require("tailwindcss");
 
 // Customize the notifier to be less noisy
-let WebpackNotifierPlugin = require('webpack-notifier');
+let WebpackNotifierPlugin = require("webpack-notifier");
 let webpackNotifier = new WebpackNotifierPlugin({
   alwaysNotify: false,
-  skipFirstNotification: true
-})
-plugins.push(webpackNotifier)
+  skipFirstNotification: true,
+});
+plugins.push(webpackNotifier);
 
 // Compress static assets in production
 if (mix.inProduction()) {
-  let CompressionWepackPlugin = require('compression-webpack-plugin');
+  let CompressionWepackPlugin = require("compression-webpack-plugin");
   let gzipCompression = new CompressionWepackPlugin({
     compressionOptions: { level: 9 },
-    test: /\.js$|\.css$|\.html$|\.svg$/
-  })
-  plugins.push(gzipCompression)
+    test: /\.js$|\.css$|\.html$|\.svg$/,
+  });
+  plugins.push(gzipCompression);
 
   let brotliCompression = new CompressionWepackPlugin({
     compressionOptions: { level: 11 },
-    filename: '[path].br[query]',
-    algorithm: 'brotliCompress',
-    test: /\.js$|\.css$|\.html$|\.svg$/
-  })
-  plugins.push(brotliCompression)
+    filename: "[path].br[query]",
+    algorithm: "brotliCompress",
+    test: /\.js$|\.css$|\.html$|\.svg$/,
+  });
+  plugins.push(brotliCompression);
 }
 
 mix
@@ -44,7 +44,9 @@ mix
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/mixjs.md
   .ts("src/js/app.ts", "public/js/app.js")
   // SASS entry file. Uses autoprefixer automatically.
-  .sass("src/css/app.scss", "public/css")
+  .postCss("src/css/app.css", "public/css", [
+    tailwindcss("./src/css/tailwind.config.js"),
+  ])
   // Customize postCSS:
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/css-preprocessors.md#postcss-plugins
   .options({
@@ -52,9 +54,8 @@ mix
     // https://github.com/tcoopman/image-webpack-loader
     imgLoaderOptions: { enabled: false },
     processCssUrls: false,
-    postCss: [ tailwindcss("./src/css/tailwind.config.js") ],
     // Stops Mix from clearing the console when compilation succeeds
-    clearConsole: false
+    clearConsole: false,
   })
   // Set public path so manifest gets output here
   .setPublicPath("public")
@@ -65,11 +66,11 @@ mix
     stats: "errors-only",
     plugins: plugins,
     watchOptions: {
-      ignored: /node_modules/
-    }
+      ignored: /node_modules/,
+    },
   })
   // Disable default Mix notifications because we're using our own notifier
-  .disableNotifications()
+  .disableNotifications();
 
 // Full API
 // Docs: https://github.com/JeffreyWay/laravel-mix/tree/master/docs#readme
