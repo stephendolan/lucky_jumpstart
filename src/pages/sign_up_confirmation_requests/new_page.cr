@@ -17,7 +17,7 @@ class SignUpConfirmationRequests::NewPage < AuthLayout
 
       div class: "mt-6" do
         span class: "block w-full rounded-md shadow-sm" do
-          submit "Request confirmation", class: "w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 cursor-pointer focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out", flow_id: "request-sign-up-confirmation-button"
+          submit "Request confirmation", class: "w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 cursor-pointer focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-primary-700 transition duration-150 ease-in-out", flow_id: "request-sign-up-confirmation-button"
         end
       end
 
@@ -38,6 +38,6 @@ class SignUpConfirmationRequests::NewPage < AuthLayout
   end
 
   private def link_class
-    "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+    "font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:underline transition ease-in-out duration-150"
   end
 end

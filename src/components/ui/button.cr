@@ -1,8 +1,8 @@
 class UI::Button < BaseComponent
-  BUTTON_BACKGROUND_HOVER   = "bg-indigo-500"
-  BUTTON_BACKGROUND_DEFAULT = "bg-indigo-600"
-  BUTTON_BACKGROUND_ACTIVE  = "bg-indigo-700"
-  BUTTON_BORDER_FOCUS       = "border-indigo-700"
+  BUTTON_BACKGROUND_HOVER   = "bg-primary-500"
+  BUTTON_BACKGROUND_DEFAULT = "bg-primary-600"
+  BUTTON_BACKGROUND_ACTIVE  = "bg-primary-700"
+  BUTTON_BORDER_FOCUS       = "border-primary-700"
 
   enum Size
     Small
@@ -34,7 +34,7 @@ class UI::Button < BaseComponent
       "hover:#{BUTTON_BACKGROUND_HOVER}",
       "focus:outline-none",
       "focus:#{BUTTON_BORDER_FOCUS}",
-      "focus:shadow-outline-indigo",
+      "focus:shadow-outline-primary",
       "active:#{BUTTON_BACKGROUND_ACTIVE}",
       "transition",
       "ease-in-out",

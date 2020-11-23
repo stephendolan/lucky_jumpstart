@@ -22,17 +22,17 @@ class Marketing::IndexPage < AuthLayout
           h2 class: "text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl" do
             text "Let's build an"
             br class: "xl:hidden"
-            span " app!", class: "text-indigo-600"
+            span " app!", class: "text-primary-600"
           end
           para class: "mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl" do
             text " Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua. "
           end
           div class: "mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8" do
             div class: "rounded-md shadow" do
-              link "Sign up", to: SignUps::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10", flow_id: "sign-up-button"
+              link "Sign up", to: SignUps::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10", flow_id: "sign-up-button"
             end
             div class: "mt-3 rounded-md shadow sm:mt-0 sm:ml-3" do
-              link "Sign in", to: SignIns::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10", flow_id: "sign-in-button"
+              link "Sign in", to: SignIns::New, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-primary-600 bg-white hover:text-primary-500 focus:outline-none focus:border-primary-300 focus:shadow-outline-primary transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10", flow_id: "sign-in-button"
             end
           end
         end
@@ -44,7 +44,7 @@ class Marketing::IndexPage < AuthLayout
     div class: "py-12 bg-white" do
       div class: "max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8" do
         div class: "lg:text-center" do
-          para "Features", class: "text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+          para "Features", class: "text-base leading-6 text-primary-600 font-semibold tracking-wide uppercase"
           h3 class: "mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10" do
             text "A better way to show people your features"
           end
@@ -57,7 +57,7 @@ class Marketing::IndexPage < AuthLayout
             li do
               div class: "flex" do
                 div class: "flex-shrink-0" do
-                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" do
+                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white" do
                     tag "svg", class: "h-6 w-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" do
                       tag "path", d: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9", stroke_linecap: "round", stroke_linejoin: "round", stroke_width: "2"
                     end
@@ -74,7 +74,7 @@ class Marketing::IndexPage < AuthLayout
             li class: "mt-10 md:mt-0" do
               div class: "flex" do
                 div class: "flex-shrink-0" do
-                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" do
+                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white" do
                     tag "svg", class: "h-6 w-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" do
                       tag "path", d: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3", stroke_linecap: "round", stroke_linejoin: "round", stroke_width: "2"
                     end
@@ -91,7 +91,7 @@ class Marketing::IndexPage < AuthLayout
             li class: "mt-10 md:mt-0" do
               div class: "flex" do
                 div class: "flex-shrink-0" do
-                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" do
+                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white" do
                     tag "svg", class: "h-6 w-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" do
                       tag "path", d: "M13 10V3L4 14h7v7l9-11h-7z", stroke_linecap: "round", stroke_linejoin: "round", stroke_width: "2"
                     end
@@ -108,7 +108,7 @@ class Marketing::IndexPage < AuthLayout
             li class: "mt-10 md:mt-0" do
               div class: "flex" do
                 div class: "flex-shrink-0" do
-                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" do
+                  div class: "flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white" do
                     tag "svg", class: "h-6 w-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" do
                       tag "path", d: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z", stroke_linecap: "round", stroke_linejoin: "round", stroke_width: "2"
                     end
