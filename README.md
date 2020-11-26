@@ -41,13 +41,12 @@ There are quite a few things I find myself adding to every Lucky application out
 
 #### CI/CD
 
-- 🐳 &nbsp; A Dockerfile that can run LuckyFlow specs
 - 🤖 &nbsp; A handy dandy [Dependabot](https://dependabot.com/) configuration file
 
 - A working GitHub Actions workflow with:
 
   - 💃 &nbsp; [Prettier](https://prettier.io/)
-  - 💎 &nbsp; Crystal Format
+  - 💎 &nbsp; [Crystal Format](https://crystal-lang.org/reference/using_the_compiler/#crystal-tool-format)
   - 🦠 &nbsp; [Ameba](https://github.com/crystal-ameba/ameba)
   - 👓 &nbsp; [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
 
