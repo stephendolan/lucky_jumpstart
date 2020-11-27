@@ -1,4 +1,4 @@
-name: Lucky Jumpstart CI
+name: Lucky App CI
 
 on:
   push:
