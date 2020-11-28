@@ -64,7 +64,7 @@ class Shared::Navbar < BaseComponent
 
   private def render_right_navbar(user : User)
     div class: "hidden sm:flex sm:space-x-2 items-center" do
-      link user.email, to: Me::Show, class: "text-sm font-medium text-color-gray-900 hover:text-gray-600"
+      link user.email, to: Me::Show, class: "text-sm font-medium text-gray-900 hover:text-gray-600"
 
       mount UI::Button, &.link("Sign Out", to: SignIns::Delete, flow_id: "nav-sign-out-button")
     end
