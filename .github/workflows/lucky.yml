@@ -92,8 +92,7 @@ jobs:
           path: |
             ~/.cache/crystal
             lib
-            lucky_tasks
-          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock', 'db/migrations/**/*') }}
+          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock') }}
           restore-keys: |
             ${{ runner.os }}-crystal-
 
@@ -107,15 +106,6 @@ jobs:
 
       - name: Compiling assets
         run: yarn prod
-
-      - name: Build lucky_tasks
-        if: steps.crystal-cache.outputs.cache-hit != 'true'
-        run: crystal build tasks.cr -o ./lucky_tasks
-
-      - name: Prepare database
-        run: |
-          ./lucky_tasks db.reset
-          ./lucky_tasks db.create_required_seeds
 
       - name: Run tests
         run: crystal spec
