@@ -60,6 +60,7 @@ jobs:
       - uses: actions/setup-node@v2.1.2
         with:
           node-version: "12.x"
+
       - name: "Install yarn"
         run: npm install -g yarn
 
@@ -83,7 +84,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
-            
+
       - name: Set up Crystal cache
         uses: actions/cache@v2
         id: crystal-cache
@@ -91,7 +92,6 @@ jobs:
           path: |
             ~/.cache/crystal
             lib
-            lucky_tasks
           key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock') }}
           restore-keys: |
             ${{ runner.os }}-crystal-
@@ -103,19 +103,9 @@ jobs:
       - name: Install yarn packages
         if: steps.node-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile --no-progress
-        
+
       - name: Compiling assets
         run: yarn prod
-
-      - name: Build lucky_tasks
-        if: steps.crystal-cache.outputs.cache-hit != 'true'
-        run: crystal build tasks.cr -o ./lucky_tasks
-
-      - name: Prepare database
-        run: |
-          ./lucky_tasks db.create
-          ./lucky_tasks db.migrate
-          ./lucky_tasks db.create_required_seeds
 
       - name: Run tests
         run: crystal spec

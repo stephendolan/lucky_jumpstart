@@ -1,7 +1,9 @@
 name: Auto Merge Dependency Updates
 
 on:
-  - pull_request
+  pull_request:
+    tags:
+      - dependencies
 
 jobs:
   run:
