@@ -9,6 +9,9 @@ require "../spec/support/boxes/**"
 class Db::CreateRequiredSeeds < LuckyCli::Task
   summary "Add database records required for the app to work"
 
+  def initialize(@quiet : Bool = false)
+  end
+
   def call
     # Using a Avram::Box:
     #
@@ -25,6 +28,7 @@ class Db::CreateRequiredSeeds < LuckyCli::Task
     # unless UserQuery.new.email("me@example.com").first?
     #  SaveUser.create!(email: "me@example.com", name: "Jane")
     # end
-    puts "Done adding required data"
+
+    @quiet || puts "Done adding required data"
   end
 end
