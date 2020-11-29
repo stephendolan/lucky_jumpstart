@@ -60,6 +60,7 @@ jobs:
       - uses: actions/setup-node@v2.1.2
         with:
           node-version: "12.x"
+
       - name: "Install yarn"
         run: npm install -g yarn
 
@@ -92,7 +93,7 @@ jobs:
             ~/.cache/crystal
             lib
             lucky_tasks
-          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock') }}
+          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock', 'db/migrations/**/*') }}
           restore-keys: |
             ${{ runner.os }}-crystal-
 
