@@ -2,8 +2,8 @@ name: Auto Merge Dependency Updates
 
 on:
   pull_request:
-    tags:
-      - dependencies
+    branches:
+      - 'dependabot/**'
 
 jobs:
   run:
