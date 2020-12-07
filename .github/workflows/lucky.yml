@@ -20,7 +20,7 @@ jobs:
         run: crystal tool format --check
 
       - name: Crystal Ameba Linter
-        uses: crystal-ameba/github-action@v0.2.6
+        uses: crystal-ameba/github-action@v0.2.7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
