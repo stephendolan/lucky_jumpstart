@@ -13,9 +13,9 @@
   },
   "scripts": {
     "heroku-postbuild": "yarn prod",
-    "dev": "yarn run webpack --progress --hide-modules --color --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "yarn run webpack --watch --hide-modules --color --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "NODE_ENV=production yarn run webpack --progress --hide-modules --color --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "mix",
+    "watch": "mix watch",
+    "prod": "mix --production"
   },
   "devDependencies": {
     "@babel/compat-data": "^7.12.7",
@@ -26,7 +26,7 @@
     "browser-sync": "^2.26.7",
     "compression-webpack-plugin": "^7.0.0",
     "eslint": "^7.15.0",
-    "laravel-mix": "^5.0.9",
+    "laravel-mix": "^6.0.0-beta.15",
     "prettier": "^2.2.1",
     "resolve-url-loader": "3.1.2",
     "ts-loader": "^8.0.11",
