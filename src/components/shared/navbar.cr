@@ -18,7 +18,7 @@ class Shared::Navbar < BaseComponent
         end
       end
 
-      div class: "hidden sm:hidden", data_target: "toggle.toggleable" do
+      div class: "hidden sm:hidden", data_toggle_target: "toggleable" do
         render_hamburger_menu(user)
       end
     end

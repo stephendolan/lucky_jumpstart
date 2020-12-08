@@ -69,6 +69,7 @@ mix
       ignored: /node_modules/,
     },
   })
+  .sourceMaps()
   // Disable default Mix notifications because we're using our own notifier
   .disableNotifications();
 
