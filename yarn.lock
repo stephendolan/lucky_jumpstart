@@ -814,17 +814,10 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.12.1":
+"@babel/runtime@^7.12.1", "@babel/runtime@^7.8.4":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.8.4":
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
-  integrity sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -4680,10 +4673,10 @@ klona@^2.0.4:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
-laravel-mix@^6.0.0-beta.15:
-  version "6.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-6.0.0-beta.15.tgz#4bd203b82e5514e1fd8bee6ea135c2493e5549fb"
-  integrity sha512-mEuCMMmx/fQanuCdxyCn/NzGqDBQBPpTXBPKRXcdxd7YBGB04/TStKJ3FdhyAZvetxwbcEGsfhxXsO4PVr3PTA==
+laravel-mix@^6.0.0-beta.17:
+  version "6.0.0-beta.17"
+  resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-6.0.0-beta.17.tgz#2f46e8ad3222a7425e0b05d0a918bd0b2e1cc6f7"
+  integrity sha512-ndpGQ324LG8EP7E8EgAEcReLbKClmCREUBvbyppIoTtHsWCyRrUqSm6FGLp7sEDqFaUfN43cL9wTUoMWWmoOBQ==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/plugin-proposal-object-rest-spread" "^7.12.1"
@@ -4727,6 +4720,7 @@ laravel-mix@^6.0.0-beta.15:
     mini-css-extract-plugin "^1.1.0"
     postcss-load-config "^3.0.0"
     postcss-loader "^4.0.4"
+    semver "^5.7.1"
     style-loader "^2.0.0"
     terser "^5.3.7"
     terser-webpack-plugin "^5.0.0"
@@ -6502,7 +6496,7 @@ semver@7.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
   integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
 
-semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
+semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
