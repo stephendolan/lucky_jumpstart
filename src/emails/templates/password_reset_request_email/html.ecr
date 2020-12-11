@@ -1,3 +1,7 @@
-<h1>Please reset your password for <%= Application.settings.name %></h1>
+<h3>Someone has requested a link to change your <%= Application.settings.application_name %> password. You can do this by clicking on the link below.</h3>
 
 <a href="<%= PasswordResets::New.url(@user.id, @token) %>">Reset password</a>
+
+<p>If you didn't request this, please ignore this email</p>
+
+<p>Your password won't be modified unless you access the link above and make the change.</p>

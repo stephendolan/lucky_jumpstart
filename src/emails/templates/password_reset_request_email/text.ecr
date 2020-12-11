@@ -1,3 +1,7 @@
-Please reset your password for <%= Application.settings.name %>:
+Someone has requested a link to change your <%= Application.settings.application_name %> password. You can do this by clicking on the link below.
 
 <%= PasswordResets::New.url(@user.id, @token) %>
+
+If you didn't request this, please ignore this email
+
+Your password won't be modified unless you access the link above and make the change.
