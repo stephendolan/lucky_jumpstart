@@ -57,7 +57,7 @@ jobs:
       - name: Install browser
         run: apt-get -yqq install chromium-browser
 
-      - uses: actions/setup-node@v2.1.2
+      - uses: actions/setup-node@v2.1.3
         with:
           node-version: "12.x"
 
