@@ -38,11 +38,13 @@ if (mix.inProduction()) {
 }
 
 mix
+  // Set public path so manifest gets output here
+  .setPublicPath("public")
   // JS entry file. Supports Vue, and uses Babel
   //
   // More info and options (like React support) here:
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/mixjs.md
-  .ts("src/js/app.ts", "public/js/app.js")
+  .ts("src/js/app.ts", "js/app.js")
   // SASS entry file. Uses autoprefixer automatically.
   .postCss("src/css/app.css", "css", [
     tailwindcss("./src/css/tailwind.config.js"),
@@ -57,8 +59,6 @@ mix
     // Stops Mix from clearing the console when compilation succeeds
     clearConsole: false,
   })
-  // Set public path so manifest gets output here
-  .setPublicPath("public")
   // Add assets to the manifest
   .version(["public/assets"])
   // Reduce noise in Webpack output
