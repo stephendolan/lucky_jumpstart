@@ -1,4 +1,4 @@
-<h3>Someone has requested a link to change your <%= Application.settings.application_name %> password. You can do this by clicking on the link below.</h3>
+<h3>Someone has requested a link to change your <%= Application.settings.name %> password. You can do this by clicking on the link below.</h3>
 
 <a href="<%= PasswordResets::New.url(@user.id, @token) %>">Reset password</a>
 
