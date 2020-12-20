@@ -40,7 +40,7 @@ class Shared::Field(T) < BaseComponent
       mount Shared::FieldLabel, attribute, label_text
 
       div class: "mt-1 relative rounded-md shadow-sm" do
-        with_defaults field: attribute, class: input_classes do |input_builder|
+        tag_defaults field: attribute, class: input_classes do |input_builder|
           yield input_builder
         end
 

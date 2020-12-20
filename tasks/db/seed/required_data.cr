@@ -1,4 +1,4 @@
-require "../spec/support/boxes/**"
+require "../../../spec/support/boxes/**"
 
 # Add seeds here that are *required* for your app to work.
 # For example, you might need at least one admin user or you might need at least
@@ -6,7 +6,7 @@ require "../spec/support/boxes/**"
 #
 # Use `Db::CreateSampleSeeds` if your only want to add sample data helpful for
 # development.
-class Db::CreateRequiredSeeds < LuckyCli::Task
+class Db::Seed::RequiredData < LuckyCli::Task
   summary "Add database records required for the app to work"
 
   def initialize(@quiet : Bool = false)

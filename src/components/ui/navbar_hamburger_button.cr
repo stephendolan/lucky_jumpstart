@@ -10,7 +10,7 @@ class UI::NavbarHamburgerButton < BaseComponent
   BUTTON_BORDER_FOCUS = "border-gray-300"
 
   def render
-    with_defaults class: button_classes do |button_builder|
+    tag_defaults class: button_classes do |button_builder|
       yield button_builder
     end
   end

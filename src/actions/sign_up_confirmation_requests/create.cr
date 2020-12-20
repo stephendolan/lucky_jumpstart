@@ -2,7 +2,7 @@ class SignUpConfirmationRequests::Create < BrowserAction
   include Auth::RedirectSignedInUsers
 
   route do
-    RequestSignUpConfirmation.new(params).submit do |_operation, user|
+    RequestSignUpConfirmation.run(params) do |_operation, user|
       if user
         flash.success = "You will receive another confirmation email shortly"
 

@@ -14,7 +14,7 @@ class UI::Button < BaseComponent
 
   def render
     span class: "inline-flex rounded-md shadow-sm" do
-      with_defaults class: "#{button_classes} #{size_classes}" do |button_builder|
+      tag_defaults class: "#{button_classes} #{size_classes}" do |button_builder|
         yield button_builder
       end
     end

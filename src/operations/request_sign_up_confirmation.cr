@@ -3,14 +3,14 @@ class RequestSignUpConfirmation < Avram::Operation
 
   attribute email : String
 
-  def submit
+  def run
     user = user_from_email
     validate(user)
 
     if valid?
-      yield self, user
+      user
     else
-      yield self, nil
+      nil
     end
   end
 
