@@ -29,3 +29,8 @@ dependencies:
   jwt:
     github: crystal-community/jwt
     version: ~> 1.4.2
+
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+    branch: master

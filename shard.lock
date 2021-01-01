@@ -1,5 +1,9 @@
 version: 2.0
 shards:
+  ameba:
+    git: https://github.com/crystal-ameba/ameba.git
+    version: 0.13.3+git.commit.552d31a82b93256546d144eff37a3ed6b7a64cac
+
   authentic:
     git: https://github.com/luckyframework/authentic.git
     version: 0.7.1
