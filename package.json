@@ -2,6 +2,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@fontsource/inter": "^4.1.0",
     "@rails/ujs": "^6.1.1",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
