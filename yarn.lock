@@ -844,10 +844,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/inter@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.1.1.tgz#d94fa4c49163932525f0fb9232f7c85c5eec897a"
-  integrity sha512-T42ST8vzd5wJYzwKstP9VUM6QV3WRBAKKDmwQYg/GjKMAtg8ioN2UhffclRq6e6tUkgMwtDWkhAPc5wqgS5gzw==
+"@fontsource/inter@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.2.0.tgz#761965d25be4be1cde00430723350ce250cda092"
+  integrity sha512-ou8wgsrfcxDhN2GDw6xRkasht6CN0nJTkxNZGgnz4YMbH8btrEhEXR+VXeFfo0Y8uKi4AMLV2qCI1EiUpnU37g==
 
 "@fullhuman/postcss-purgecss@^3.0.0":
   version "3.1.3"
