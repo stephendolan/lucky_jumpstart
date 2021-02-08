@@ -1,4 +1,4 @@
-require "../../../spec/support/boxes/**"
+require "../../../spec/support/factories/**"
 
 # Add seeds here that are *required* for your app to work.
 # For example, you might need at least one admin user or you might need at least
@@ -13,10 +13,10 @@ class Db::Seed::RequiredData < LuckyCli::Task
   end
 
   def call
-    # Using a Avram::Box:
+    # Using a Avram::Factory:
     #
     # Use the defaults, but override just the email
-    # UserBox.create &.email("me@example.com")
+    # UserFactory.create &.email("me@example.com")
 
     # Using a SaveOperation:
     #

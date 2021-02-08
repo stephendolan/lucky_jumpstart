@@ -2,7 +2,7 @@ require "../spec_helper"
 
 describe "Resend confirmation flow" do
   it "works for an unconfirmed user" do
-    user = UserBox.create &.confirmed_at(nil)
+    user = UserFactory.create &.confirmed_at(nil)
     flow = ResendEmailConfirmationFlow.new(user)
 
     flow.request_email_confirmation
@@ -10,7 +10,7 @@ describe "Resend confirmation flow" do
   end
 
   it "works for a confirmed user" do
-    user = UserBox.create &.confirmed_at(Time.utc)
+    user = UserFactory.create &.confirmed_at(Time.utc)
     flow = ResendEmailConfirmationFlow.new(user)
 
     flow.request_email_confirmation
