@@ -18,7 +18,7 @@ jobs:
         run: crystal tool format --check
 
       - name: Set up Crystal cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         id: crystal-cache
         with:
           path: |
@@ -80,7 +80,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Set up Yarn cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         id: yarn-cache
         with:
           path: |
@@ -92,7 +92,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Set up Crystal cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         id: crystal-cache
         with:
           path: |
