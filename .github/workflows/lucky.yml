@@ -69,7 +69,7 @@ jobs:
       - name: Install browser
         run: apt-get -yqq install chromium-browser
 
-      - uses: actions/setup-node@v2.1.4
+      - uses: actions/setup-node@v2.1.5
         with:
           node-version: "12.x"
       - name: "Install yarn"
