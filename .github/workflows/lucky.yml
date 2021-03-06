@@ -61,6 +61,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Create .env file
+        run: touch .env
+
       - name: Install PostgreSQL client
         run: |
           apt-get update
