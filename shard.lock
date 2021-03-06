@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 0.13.4+git.commit.51b0a07e810501895a71a8f8183ccf752d10d083
+    version: 0.14.0+git.commit.d8c32f0045d5f43ee9995e9f65400e795235be62
 
   authentic:
     git: https://github.com/luckyframework/authentic.git
@@ -10,7 +10,7 @@ shards:
 
   avram:
     git: https://github.com/luckyframework/avram.git
-    version: 0.19.0
+    version: 0.19.1
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git
@@ -40,10 +40,6 @@ shards:
     git: https://github.com/luckyframework/dexter.git
     version: 0.3.2
 
-  dotenv:
-    git: https://github.com/gdotdesign/cr-dotenv.git
-    version: 0.7.0
-
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
     version: 0.1.4
@@ -54,7 +50,7 @@ shards:
 
   habitat:
     git: https://github.com/luckyframework/habitat.git
-    version: 0.4.4
+    version: 0.4.5
 
   jwt:
     git: https://github.com/crystal-community/jwt.git
@@ -67,6 +63,10 @@ shards:
   lucky_cli:
     git: https://github.com/luckyframework/lucky_cli.git
     version: 0.26.0
+
+  lucky_env:
+    git: https://github.com/luckyframework/lucky_env.git
+    version: 0.1.0+git.commit.f166b372502707cf7896cc6edd6be02be7d7aec0
 
   lucky_flow:
     git: https://github.com/luckyframework/lucky_flow.git
