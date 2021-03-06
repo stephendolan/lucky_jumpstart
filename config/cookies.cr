@@ -1,8 +1,6 @@
 require "./server"
 
-Lucky::Session.configure do |settings|
-  settings.key = "_lucky_jumpstart_session"
-end
+Lucky::Session.configure(&.key=("_lucky_jumpstart_session"))
 
 Lucky::CookieJar.configure do |settings|
   settings.on_set = ->(cookie : HTTP::Cookie) {
