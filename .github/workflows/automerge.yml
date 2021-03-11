@@ -7,7 +7,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2.3
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2.4
         with:
           target: minor
           # This needs to be set manually to an access token
