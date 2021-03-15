@@ -12,9 +12,10 @@ pull_request_rules:
       merge:
         method: squash
 
-  - name: When a conflict emerges, ask the author to resolve it
+  - name: When a dependency conflict emerges, ask Dependabot to rebase its update
     conditions:
       - conflict
+      - author~=^dependabot(|-preview)\[bot\]$
     actions:
       comment:
-        message: This pull request is now in conflict. @{{author}}, could you merge from `main` and push the merge commit?
+        message: "@dependabot rebase"
