@@ -10,7 +10,7 @@ pull_request_rules:
       - check-success=RunSpecs
     actions:
       merge:
-        method: merge
+        method: squash
 
   - name: When a conflict emerges, ask the author to resolve it
     conditions:
