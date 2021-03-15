@@ -17,4 +17,4 @@ pull_request_rules:
       - conflict
     actions:
       comment:
-        message: This pull request is now in conflict. {{@author}}, could you merge from `main` and push the merge commit?
+        message: This pull request is now in conflict. @{{author}}, could you merge from `main` and push the merge commit?
