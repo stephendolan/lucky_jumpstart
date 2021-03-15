@@ -1,0 +1,20 @@
+# Provides automatic merging of pull requests based on specific rules.
+#
+# See: https://docs.mergify.io/configuration.html
+
+pull_request_rules:
+  - name: Automatically merge Dependabot pull requests
+    conditions:
+      - author~=^dependabot(|-preview)\[bot\]$
+      - check-success=CheckFormat
+      - check-success=RunSpecs
+    actions:
+      merge:
+        method: merge
+
+  - name: When a conflict emerges, ask the author to resolve it
+    conditions:
+      - conflict
+    actions:
+      comment:
+        message: This pull request is now in conflict. {{@author}}, could you merge from `main` and push the merge commit?
