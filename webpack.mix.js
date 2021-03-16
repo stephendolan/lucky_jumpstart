@@ -46,9 +46,7 @@ mix
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/mixjs.md
   .ts("src/js/app.ts", "js/app.js")
   // SASS entry file. Uses autoprefixer automatically.
-  .postCss("src/css/app.css", "css", [
-    tailwindcss("./src/css/tailwind.config.js"),
-  ])
+  .postCss("src/css/app.css", "css", [require("@tailwindcss/jit")])
   // Customize postCSS:
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/css-preprocessors.md#postcss-plugins
   .options({
