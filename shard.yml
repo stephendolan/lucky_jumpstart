@@ -22,7 +22,7 @@ dependencies:
     version: ~> 0.1.3
   lucky_env:
     github: luckyframework/lucky_env
-    versino: ~> 0.1.0
+    version: ~> 0.1.0
   jwt:
     github: crystal-community/jwt
     version: ~> 1.5.0
