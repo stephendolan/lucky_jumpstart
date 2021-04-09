@@ -34,3 +34,6 @@ development_dependencies:
   lucky_flow:
     github: luckyframework/lucky_flow
     version: ~> 0.7.2
+  spark:
+    github: stephendolan/spark
+    version: ~> 1.0
