@@ -32,7 +32,7 @@ class Jumpstart::Init < LuckyCli::Task
     Spark.reset_indentation
     prompt.newline
 
-    prompt.say "🚀 Thanks for getting started with #{default_human_app_name}! Enjoy!", color: :yellow, style: :bold
+    prompt.say "🚀 Thanks for getting started with #{default_human_app_name}!", color: :yellow, style: :bold
   end
 
   private def set_up_git_pre_commit_hook

@@ -31,7 +31,7 @@ jobs:
 
       - name: Install shards
         if: steps.crystal-cache.outputs.cache-hit != 'true'
-        run: shards check || shards install
+        run: shards check || shards install --ignore-crystal-version
 
       - name: Run ameba linter
         run: ./bin/ameba
@@ -108,7 +108,7 @@ jobs:
 
       - name: Install shards
         if: steps.crystal-cache.outputs.cache-hit != 'true'
-        run: shards check || shards install
+        run: shards check || shards install --ignore-crystal-version
 
       - name: Install yarn packages
         if: steps.yarn-cache.outputs.cache-hit != 'true'
