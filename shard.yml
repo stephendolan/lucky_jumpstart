@@ -30,7 +30,7 @@ dependencies:
 development_dependencies:
   ameba:
     github: crystal-ameba/ameba
-    branch: master
+    version: ~> 0.14.2
   lucky_flow:
     github: luckyframework/lucky_flow
     version: ~> 0.7.3
