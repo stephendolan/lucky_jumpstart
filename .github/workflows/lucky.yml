@@ -9,10 +9,12 @@ on:
 jobs:
   CheckFormat:
     runs-on: ubuntu-latest
-    container:
-      image: crystallang/crystal:0.36.1
     steps:
       - uses: actions/checkout@v2
+
+      - uses: oprypin/install-crystal@v1
+        with:
+          crystal: 1.0.0
 
       - name: Format
         run: crystal tool format --check
@@ -38,11 +40,9 @@ jobs:
 
   RunSpecs:
     runs-on: ubuntu-latest
-    container:
-      image: crystallang/crystal:0.36.1
+
     env:
       LUCKY_ENV: test
-      DB_HOST: postgres
 
     services:
       postgres:
@@ -64,35 +64,15 @@ jobs:
       - name: Create .env file
         run: touch .env
 
-      - name: Install PostgreSQL client
-        run: |
-          apt-get update
-          apt-get -yqq install libpq-dev postgresql-client
-
-      - name: Install browser
-        run: apt-get -yqq install chromium-browser
-
-      - uses: actions/setup-node@v2.1.5
+      - uses: oprypin/install-crystal@v1
         with:
-          node-version: "12.x"
-      - name: "Install yarn"
-        run: npm install -g yarn
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          crystal: 1.0.0
 
       - name: Set up Yarn cache
-        uses: actions/cache@v2.1.5
-        id: yarn-cache
+        uses: actions/cache@v2
         with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            **/node_modules
-
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Set up Crystal cache
         uses: actions/cache@v2.1.5
@@ -114,7 +94,7 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile --no-progress
 
-      - name: Compiling assets
+      - name: Compile assets
         run: yarn prod
 
       - name: Run tests

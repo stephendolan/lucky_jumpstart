@@ -2,23 +2,19 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 0.14.2+git.commit.9a25214bb5ebbdae0d73fad62005dd80975e25cc
+    version: 0.14.2+git.commit.7c586eb9e5b1cf901ecd053944df115b99afe496
 
   authentic:
     git: https://github.com/luckyframework/authentic.git
-    version: 0.7.2
+    version: 0.7.3
 
   avram:
     git: https://github.com/luckyframework/avram.git
-    version: 0.19.1
+    version: 0.20.0
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git
-    version: 1.8.3
-
-  blank:
-    git: https://github.com/kostya/blank.git
-    version: 0.1.0
+    version: 1.9.0
 
   carbon:
     git: https://github.com/luckyframework/carbon.git
@@ -58,11 +54,7 @@ shards:
 
   lucky:
     git: https://github.com/luckyframework/lucky.git
-    version: 0.26.0
-
-  lucky_cli:
-    git: https://github.com/luckyframework/lucky_cli.git
-    version: 0.26.0
+    version: 0.27.2
 
   lucky_env:
     git: https://github.com/luckyframework/lucky_env.git
@@ -75,6 +67,10 @@ shards:
   lucky_router:
     git: https://github.com/luckyframework/lucky_router.git
     version: 0.4.2
+
+  lucky_task:
+    git: https://github.com/luckyframework/lucky_task.git
+    version: 0.1.0
 
   openssl_ext:
     git: https://github.com/spider-gazelle/openssl_ext.git
@@ -94,7 +90,7 @@ shards:
 
   shell-table:
     git: https://github.com/luckyframework/shell-table.cr.git
-    version: 0.9.2+git.commit.078a04ea58ead5203bb435a3b5fff448ddabaeea
+    version: 0.9.2+git.commit.ad72379f241ba28698ca2873d9b43785324a7932
 
   spark:
     git: https://github.com/stephendolan/spark.git

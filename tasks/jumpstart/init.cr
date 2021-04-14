@@ -1,6 +1,6 @@
 require "spark"
 
-class Jumpstart::Init < LuckyCli::Task
+class Jumpstart::Init < LuckyTask::Task
   summary "Set up and customize the Jumpstart template"
   name "jumpstart.init"
 

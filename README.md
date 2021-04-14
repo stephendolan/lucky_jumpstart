@@ -46,13 +46,14 @@ There are quite a few things I find myself adding to every Lucky application out
 - 🔀 &nbsp; A [Mergify.io](https://mergify.io) configuration file to handle auto-merging dependency updates
 
 - A working GitHub Actions workflow with:
-
   - 💃 &nbsp; [Prettier](https://prettier.io/)
   - 💎 &nbsp; [Crystal Format](https://crystal-lang.org/reference/using_the_compiler/#crystal-tool-format)
   - 🦠 &nbsp; [Ameba](https://github.com/crystal-ameba/ameba)
   - 👓 &nbsp; [Crystal Spec](https://crystal-lang.org/api/latest/Spec.html)
 
-#### Deployment
+#### Deployment options
 
-- 🌊 &nbsp; [Digital Ocean App Platform](https://www.digitalocean.com/docs/app-platform)
+- 🐳 &nbsp; [Docker](https://www.docker.com), which enables any Dockerfile-based deployment like:
+  - [Render](https://render.com)
+  - [Digital Ocean Apps Platform](https://www.digitalocean.com/products/app-platform)
 - 👾 &nbsp; [Heroku](https://luckyframework.org/guides/deploying/heroku)
