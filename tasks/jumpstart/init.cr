@@ -32,7 +32,38 @@ class Jumpstart::Init < LuckyTask::Task
     Spark.reset_indentation
     prompt.newline
 
+    prompt.say "#{bullet_list_icon} Next, we'll set up your database.", color: :light_cyan
+    Spark.indent
+    set_up_database
+
+    Spark.reset_indentation
+    prompt.newline
+
     prompt.say "🚀 Thanks for getting started with #{default_human_app_name}!", color: :yellow, style: :bold
+  end
+
+  # We can't call the tasks directly since we're modifying file contents after compilation.
+  # Instead, we call each command on the system shell.
+  private def set_up_database
+    prompt.say "Creating database..."
+    system("lucky db.create")
+    prompt.say "Done."
+
+    prompt.say "Verifying connection..."
+    system("lucky db.verify_connection")
+    prompt.say "Done."
+
+    prompt.say "Migrating database..."
+    system "lucky db.migrate"
+    prompt.say "Done."
+
+    prompt.say "Seeding required data..."
+    system "lucky db.seed.required"
+    prompt.say "Done."
+
+    prompt.say "Seeding sample data..."
+    system "lucky db.seed.sample"
+    prompt.say "Done."
   end
 
   private def set_up_git_pre_commit_hook
