@@ -14,7 +14,7 @@ notice "Installing node dependencies"
 yarn install --no-progress | indent
 
 notice "Compiling assets"
-yarn prod | indent
+yarn dev | indent
 
 print_done
 
