@@ -42,9 +42,9 @@ RUN mv ./bin/webserver /usr/local/bin/webserver
 
 # Create the release script
 FROM alpine as release_script_build
-RUN echo "#!/bin/sh" > /usr/local/bin/release
-RUN echo "lucky db.migrate" > /usr/local/bin/release
-RUN echo "./webserver" > /usr/local/bin/release
+RUN echo "#!/bin/sh" >> /usr/local/bin/release
+RUN echo "lucky db.migrate" >> /usr/local/bin/release
+RUN echo "./webserver" >> /usr/local/bin/release
 RUN chmod +x /usr/local/bin/release
 
 # Serve the application binary from a simple Alpine container
