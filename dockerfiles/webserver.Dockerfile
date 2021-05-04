@@ -37,13 +37,14 @@ WORKDIR /tmp_webserver_build
 COPY . .
 COPY --from=crystal_dependencies /tmp_crystal/lib lib
 COPY --from=webpack_build /tmp_webpack/public public
-RUN crystal build --static --release src/start_server.cr -o /usr/local/bin/lucky-app
+RUN shards build --production --static --release src/start_server.cr
+RUN mv ./bin/webserver /usr/local/bin/webserver
 
 # Create the release script
 FROM alpine as release_script_build
 RUN echo "#!/bin/sh\n" \
          "lucky db.migrate\n" \
-         "./lucky-app" > /usr/local/bin/release
+         "./webserver" > /usr/local/bin/release
 RUN chmod +x /usr/local/bin/release
 
 # Serve the application binary from a simple Alpine container
@@ -53,6 +54,6 @@ ENV NODE_ENV=production
 WORKDIR /app
 COPY --from=release_script_build /usr/local/bin/release release
 COPY --from=lucky_build /usr/local/bin/lucky /usr/local/bin/lucky
-COPY --from=webserver_build /usr/local/bin/lucky-app lucky-app
+COPY --from=webserver_build /usr/local/bin/webserver webserver
 COPY --from=webpack_build /tmp_webpack/public public
 CMD ["./release"]
