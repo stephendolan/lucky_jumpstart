@@ -48,7 +48,7 @@ RUN echo "#!/bin/sh\n" \
 RUN chmod +x /usr/local/bin/release
 
 # Serve the application binary from a simple Alpine container
-FROM alpine
+FROM alpine as webserver
 ENV LUCKY_ENV=production
 ENV NODE_ENV=production
 WORKDIR /app
