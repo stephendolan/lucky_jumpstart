@@ -37,7 +37,7 @@ WORKDIR /tmp_webserver_build
 COPY . .
 COPY --from=crystal_dependencies /tmp_crystal/lib lib
 COPY --from=webpack_build /tmp_webpack/public public
-RUN shards build --production --static --release src/start_server.cr
+RUN shards build --production --static --release
 RUN mv ./bin/webserver /usr/local/bin/webserver
 
 # Create the release script
