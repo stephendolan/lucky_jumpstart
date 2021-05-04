@@ -56,4 +56,5 @@ There are quite a few things I find myself adding to every Lucky application out
 - 🐳 &nbsp; [Docker](https://www.docker.com), which enables any Dockerfile-based deployment like:
   - [Render](https://render.com)
   - [Digital Ocean Apps Platform](https://www.digitalocean.com/products/app-platform)
-- 👾 &nbsp; [Heroku](https://luckyframework.org/guides/deploying/heroku)
+- 🟩 &nbsp; [Render](https://render.com) with a built-in `render.yaml` file
+- 👾 &nbsp; [Heroku](https://luckyframework.org/guides/deploying/heroku) with a built-in `Procfile` file
