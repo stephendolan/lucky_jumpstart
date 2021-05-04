@@ -51,7 +51,7 @@ FROM alpine
 ENV LUCKY_ENV=production
 ENV NODE_ENV=production
 WORKDIR /app
-COPY --from=release_script_build /usr/local/bin/release.sh release
+COPY --from=release_script_build /usr/local/bin/release release
 COPY --from=lucky_build /usr/local/bin/lucky /usr/local/bin/lucky
 COPY --from=webserver_build /usr/local/bin/lucky-app lucky-app
 COPY --from=webpack_build /tmp_webpack/public public
