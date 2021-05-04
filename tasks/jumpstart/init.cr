@@ -95,12 +95,13 @@ class Jumpstart::Init < LuckyTask::Task
 
   private def replace_programmatic_app_name(name : String)
     file_paths = [
-      "shard.yml",
-      "docker-compose.yml",
-      "config/route_helper.cr",
       "config/application.cr",
       "config/cookies.cr",
       "config/database.cr",
+      "config/route_helper.cr",
+      "docker-compose.yml",
+      "render.yaml",
+      "shard.yml",
     ]
 
     file_paths.each do |file_path|
@@ -112,8 +113,9 @@ class Jumpstart::Init < LuckyTask::Task
 
   private def replace_human_app_name(name : String)
     file_paths = [
-      "src/components/shared/navbar.cr",
       "config/application.cr",
+      "render.yaml",
+      "src/components/shared/navbar.cr",
     ]
 
     file_paths.each do |file_path|
