@@ -43,8 +43,6 @@ RUN chmod +x /usr/local/bin/release
 FROM alpine as webserver
 WORKDIR /app
 RUN apk --no-cache add postgresql-client
-ENV LUCKY_ENV=production
-ENV NODE_ENV=production
 COPY --from=release_script_build /usr/local/bin/release release
 COPY --from=lucky_tasks_build /usr/local/bin/lucky /usr/local/bin/lucky
 COPY --from=lucky_webserver_build /usr/local/bin/webserver webserver
