@@ -45,7 +45,7 @@ WORKDIR /app
 RUN apk --no-cache add postgresql-client
 ENV LUCKY_ENV=production
 ENV NODE_ENV=production
-COPY --from=crystal_dependencies /shards/lib/lucky/tasks/exec_template.cr.template lib/lucky/tasks/
+COPY --from=crystal_dependencies /shards/lib/lucky/tasks/exec_template.cr.template /lib/lucky/tasks/
 COPY --from=release_script_build /usr/local/bin/release release
 COPY --from=lucky_tasks_build /usr/local/bin/lucky /usr/local/bin/lucky
 COPY --from=lucky_webserver_build /usr/local/bin/webserver webserver
