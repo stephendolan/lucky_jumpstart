@@ -41,9 +41,7 @@ There are quite a few things I find myself adding to every Lucky application out
 
 #### CI/CD
 
-- 🤖 &nbsp; A handy dandy [Dependabot](https://dependabot.com/) configuration file
-
-- 🔀 &nbsp; A [Mergify.io](https://mergify.io) configuration file to handle auto-merging dependency updates
+- 🤖 &nbsp; A handy dandy [Dependabot](https://dependabot.com/) configuration file, and a workflow to handle auto-merging
 
 - A working GitHub Actions workflow with:
   - 💃 &nbsp; [Prettier](https://prettier.io/)
