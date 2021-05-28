@@ -857,10 +857,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/inter@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.3.0.tgz#deb5c5d5d2ce0d8d16173a68ba1e961741ef6d30"
-  integrity sha512-qtUF+Fn9vH4O7V/13kOeemEJpQfhTMxtnOJzJw3kY7SOwl1cbs4fnd9QnQOczU3AVBJEPF1ik639uvaOg7g43A==
+"@fontsource/inter@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.4.0.tgz#1915b559fcaf77c4b23d578f82f75877a960ff41"
+  integrity sha512-w4ACVJpmJeSwpcHR3APAo9lg9Im3fwwz5RqLHlZoelcdxD1sj/muDsluo2dVZYGCmMxmIQkZZK8hUH1cPQGffw==
 
 "@fullhuman/postcss-purgecss@^3.1.3":
   version "3.1.3"
