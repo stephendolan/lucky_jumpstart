@@ -19,7 +19,7 @@
     "prod": "mix --production"
   },
   "devDependencies": {
-    "@babel/compat-data": "^7.14.0",
+    "@babel/compat-data": "^7.14.4",
     "@types/node": "^15.6.1",
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
