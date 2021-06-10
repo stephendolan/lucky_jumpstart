@@ -7,7 +7,7 @@
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
-    "postcss": "^8.3.0",
+    "postcss": "^8.3.1",
     "stimulus": "^2.0.0",
     "tailwindcss": "^2.1.4",
     "turbolinks": "^5.2.0"
