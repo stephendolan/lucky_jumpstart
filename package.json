@@ -22,7 +22,7 @@
     "@babel/compat-data": "^7.14.7",
     "@types/node": "^15.12.4",
     "@types/webpack-env": "^1.16.0",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.27.0",
     "browser-sync": "^2.26.14",
     "compression-webpack-plugin": "^8.0.0",
