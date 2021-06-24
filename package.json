@@ -9,7 +9,7 @@
     "@tailwindcss/typography": "^0.4.1",
     "postcss": "^8.3.5",
     "stimulus": "^2.0.0",
-    "tailwindcss": "^2.2.2",
+    "tailwindcss": "^2.2.4",
     "turbolinks": "^5.2.0"
   },
   "scripts": {
