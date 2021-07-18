@@ -11,6 +11,12 @@ class User < BaseModel
     column encrypted_password : String
   end
 
+  def full_name : String?
+    return nil unless first_name || last_name
+
+    [first_name, last_name].compact.join(" ")
+  end
+
   # Show Gravatar images by default for users.
   #
   # If there is another potential source, you can select among them in this method.
