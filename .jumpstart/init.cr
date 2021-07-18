@@ -55,11 +55,11 @@ class Jumpstart::Init
     prompt.say "Done."
 
     prompt.say "Seeding required data..."
-    system "lucky db.seed.required"
+    system "lucky db.seed.required_data"
     prompt.say "Done."
 
     prompt.say "Seeding sample data..."
-    system "lucky db.seed.sample"
+    system "lucky db.seed.sample_data"
     prompt.say "Done."
   end
 
