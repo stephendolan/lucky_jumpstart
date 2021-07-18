@@ -28,4 +28,4 @@ if [ ! -f ".env" ]; then
 fi
 
 print_done
-notice "Run 'lucky jumpstart.init' to finish the setup"
+notice "Run 'crystal run .jumpstart/init.cr' to finish the setup"
