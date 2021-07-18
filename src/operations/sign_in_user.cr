@@ -30,6 +30,10 @@ class SignInUser < Avram::Operation
       unless Authentic.correct_password?(user, password.value.to_s)
         password.add_error "is wrong"
       end
+
+      unless user.confirmed?
+        email.add_error "is not confirmed"
+      end
     else
       # Usually ok to say that an email is not in the system:
       # https://kev.inburke.com/kevin/invalid-username-or-password-useless/

@@ -4,6 +4,8 @@ class CreateUsers::V00000000000010 < Avram::Migrator::Migration::V1
       primary_key id : UUID
       add_timestamps
       add email : String, unique: true, case_sensitive: false
+      add first_name : String?
+      add last_name : String?
       add encrypted_password : String
       add confirmed_at : Time?
       add confirmation_token : String
