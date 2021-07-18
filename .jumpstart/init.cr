@@ -1,9 +1,6 @@
 require "spark"
 
-class Jumpstart::Init < LuckyTask::Task
-  summary "Set up and customize the Jumpstart template"
-  name "jumpstart.init"
-
+class Jumpstart::Init
   getter prompt : Spark::Prompt = Spark::Prompt.new
   getter bullet_list_icon : String = "💎"
   getter default_programmatic_app_name : String = "lucky_jumpstart"
@@ -123,3 +120,5 @@ class Jumpstart::Init < LuckyTask::Task
     end
   end
 end
+
+Jumpstart::Init.new.call
