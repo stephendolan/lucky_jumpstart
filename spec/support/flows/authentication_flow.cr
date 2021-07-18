@@ -14,7 +14,7 @@ class AuthenticationFlow < BaseFlow
   end
 
   def sign_out
-    visit Me::Show
+    visit Me::Edit
     sign_out_button.click
   end
 
@@ -24,6 +24,11 @@ class AuthenticationFlow < BaseFlow
       email: email,
       password: password
     sign_in_button.click
+  end
+
+  def confirm_user
+    user = UserQuery.new.email(email).first
+    SaveUser.update!(user, confirmed_at: Time.utc)
   end
 
   def should_send_confirmation_email
@@ -41,6 +46,10 @@ class AuthenticationFlow < BaseFlow
 
   def should_have_password_error
     el("body", text: "Password is wrong").should be_on_page
+  end
+
+  def should_have_confirmation_error
+    el("body", text: "Email is not confirmed").should be_on_page
   end
 
   private def sign_out_button
