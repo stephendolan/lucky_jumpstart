@@ -30,7 +30,7 @@
     "laravel-mix": "^6.0.25",
     "prettier": "^2.3.2",
     "resolve-url-loader": "4.0.0",
-    "ts-loader": "^9.2.3",
+    "ts-loader": "^9.2.4",
     "typescript": "^4.3.5"
   }
 }
