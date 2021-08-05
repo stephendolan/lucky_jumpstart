@@ -16,10 +16,10 @@
   dependencies:
     "@babel/highlight" "^7.14.5"
 
-"@babel/compat-data@^7.13.11", "@babel/compat-data@^7.14.5", "@babel/compat-data@^7.14.9":
-  version "7.14.9"
-  resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.14.9.tgz#ac7996ceaafcf8f410119c8af0d1db4cf914a210"
-  integrity sha512-p3QjZmMGHDGdpcwEYYWu7i7oJShJvtgMjJeb0W95PPhSm++3lm8YXYOh45Y6iCN9PkZLTZ7CIX5nFrp7pw7TXw==
+"@babel/compat-data@^7.13.11", "@babel/compat-data@^7.14.5", "@babel/compat-data@^7.15.0":
+  version "7.15.0"
+  resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.15.0.tgz#2dbaf8b85334796cafbb0f5793a90a2fc010b176"
+  integrity sha512-0NqAC1IJE0S0+lL1SWFMxMkz1pKCNCjI4tr2Zx4LJSXxCLAdr6KyArnY+sno5m3yH9g737ygOyPABDsnXkpxiA==
 
 "@babel/core@^7.14.5":
   version "7.14.6"
