@@ -27,7 +27,7 @@
     "browser-sync": "^2.27.5",
     "compression-webpack-plugin": "^8.0.1",
     "eslint": "^7.32.0",
-    "laravel-mix": "^6.0.28",
+    "laravel-mix": "^6.0.29",
     "prettier": "^2.3.2",
     "resolve-url-loader": "4.0.0",
     "ts-loader": "^9.2.5",
