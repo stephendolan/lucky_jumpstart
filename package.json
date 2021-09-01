@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@babel/compat-data": "^7.15.0",
-    "@types/node": "^16.7.8",
+    "@types/node": "^16.7.10",
     "@types/webpack-env": "^1.16.2",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
