@@ -1,7 +1,7 @@
-database_name = "lucky_jumpstart_#{Lucky::Env.name}"
+database_name = "lucky_jumpstart_#{LuckyEnv.environment}"
 
 AppDatabase.configure do |settings|
-  if Lucky::Env.production?
+  if LuckyEnv.production?
     settings.credentials = Avram::Credentials.parse(ENV["DATABASE_URL"])
   else
     settings.credentials = Avram::Credentials.parse?(ENV["DATABASE_URL"]?) || Avram::Credentials.new(
@@ -21,5 +21,9 @@ Avram.configure do |settings|
 
   # In production, allow lazy loading (N+1).
   # In development and test, raise an error if you forget to preload associations
-  settings.lazy_load_enabled = Lucky::Env.production?
+  settings.lazy_load_enabled = LuckyEnv.production?
+
+  # Always parse `Time` values with these specific formats.
+  # Used for both database values, and datetime input fields.
+  # settings.time_formats << "%F"
 end
