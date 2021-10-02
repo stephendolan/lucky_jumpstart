@@ -18,7 +18,7 @@ abstract class AuthLayout
     html lang: "en" do
       mount Shared::LayoutHead, page_title: page_title
 
-      body do
+      body class: "font-inter" do
         mount Shared::Navbar, simple: true
         mount Shared::FlashMessages, context.flash
         content

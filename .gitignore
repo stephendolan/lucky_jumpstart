@@ -10,7 +10,6 @@ start_server
 /tmp
 /public/js
 /public/css
-/public/mix-manifest.json
 /node_modules
 yarn-error.log
 .DS_Store

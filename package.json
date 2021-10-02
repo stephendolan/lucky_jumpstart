@@ -2,36 +2,34 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@fontsource/inter": "^4.5.0",
     "@hotwired/stimulus": "^3.0.0",
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@rails/ujs": "^6.1.4",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.3.6",
+    "esbuild": "^0.13.3",
     "postcss": "^8.3.8",
     "tailwindcss": "^2.2.16",
     "turbolinks": "^5.2.0"
   },
   "scripts": {
     "heroku-postbuild": "yarn prod",
-    "dev": "TAILWIND_MODE=build yarn run mix",
-    "watch": "yarn run mix watch",
-    "prod": "yarn run mix --production"
+    "build:js": "esbuild src/js/app.ts --bundle --sourcemap=inline --target=es2016 --outfile=public/js/app.js",
+    "build:css": "tailwindcss --postcss --input=src/css/app.css --output=public/css/app.css",
+    "watch:js": "esbuild src/js/app.ts --bundle --watch --sourcemap=inline --target=es2016 --outfile=public/js/app.js",
+    "watch:css": "tailwindcss --postcss --watch --input=src/css/app.css --output=public/css/app.css",
+    "prod:js": "esbuild src/js/app.ts --bundle --minify --sourcemap=inline --target=es2016 --outfile=public/js/app.js",
+    "prod:css": "tailwindcss --postcss --minify --input=src/css/app.css --output=public/css/app.css"
   },
   "devDependencies": {
-    "@babel/compat-data": "^7.15.0",
     "@types/node": "^16.10.2",
     "@types/webpack-env": "^1.16.2",
-    "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0",
     "browser-sync": "^2.27.5",
-    "compression-webpack-plugin": "^9.0.0",
-    "eslint": "^7.32.0",
-    "laravel-mix": "^6.0.30",
     "prettier": "^2.4.1",
     "resolve-url-loader": "4.0.0",
-    "ts-loader": "^9.2.6",
+    "tailwindcss-font-inter": "^3.0.0",
     "typescript": "^4.4.2"
   }
 }

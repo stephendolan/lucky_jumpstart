@@ -12,10 +12,6 @@ print_done
 
 notice "Installing node dependencies"
 yarn install --no-progress | indent
-
-notice "Compiling assets"
-yarn dev | indent
-
 print_done
 
 notice "Installing shards"
