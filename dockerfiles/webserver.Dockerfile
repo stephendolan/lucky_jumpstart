@@ -11,8 +11,7 @@ FROM node:alpine as webpack_build
 WORKDIR /webpack
 COPY . .
 RUN yarn install
-RUN yarn prod:css
-RUN yarn prod:js
+RUN yarn prod
 
 # Build the Lucky tasks binary
 FROM crystallang/crystal:1.0.0-alpine as lucky_tasks_build

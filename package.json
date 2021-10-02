@@ -20,7 +20,8 @@
     "watch:js": "esbuild src/js/app.ts --bundle --watch --sourcemap=inline --target=es2016 --outfile=public/js/app.js",
     "watch:css": "tailwindcss --postcss --watch --input=src/css/app.css --output=public/css/app.css",
     "prod:js": "esbuild src/js/app.ts --bundle --minify --sourcemap=inline --target=es2016 --outfile=public/js/app.js",
-    "prod:css": "tailwindcss --postcss --minify --input=src/css/app.css --output=public/css/app.css"
+    "prod:css": "tailwindcss --postcss --minify --input=src/css/app.css --output=public/css/app.css",
+    "prod": "yarn prod:js && yarn prod:css"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
