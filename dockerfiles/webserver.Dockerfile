@@ -7,8 +7,8 @@ COPY shard.yml shard.lock ./
 RUN  shards install --production
 
 # Install the application Yarn dependencies, then compile production CSS/JS
-FROM node:alpine as webpack_build
-WORKDIR /webpack
+FROM node:alpine as asset_build
+WORKDIR /assets
 COPY . .
 RUN yarn install
 RUN yarn prod
@@ -19,7 +19,7 @@ ENV LUCKY_ENV=production
 RUN apk --no-cache add yaml-static
 COPY . .
 COPY --from=crystal_dependencies /shards/lib lib
-COPY --from=webpack_build /webpack/public public
+COPY --from=asset_build /assets/public public
 RUN crystal build --static --release tasks.cr -o /usr/local/bin/lucky
 
 # Build the webserver binary
@@ -29,7 +29,7 @@ RUN apk --no-cache add yaml-static
 ENV LUCKY_ENV=production
 COPY . .
 COPY --from=crystal_dependencies /shards/lib lib
-COPY --from=webpack_build /webpack/public public
+COPY --from=asset_build /assets/public public
 RUN shards build --production --static --release
 RUN mv ./bin/webserver /usr/local/bin/webserver
 
@@ -46,5 +46,5 @@ RUN apk --no-cache add postgresql-client
 COPY --from=release_script_build /usr/local/bin/release release
 COPY --from=lucky_tasks_build /usr/local/bin/lucky /usr/local/bin/lucky
 COPY --from=lucky_webserver_build /usr/local/bin/webserver webserver
-COPY --from=webpack_build /webpack/public public
+COPY --from=asset_build /assets/public public
 CMD ["./release"]
