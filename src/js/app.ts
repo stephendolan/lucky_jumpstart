@@ -14,8 +14,18 @@ require("turbolinks").start();
 // })
 
 import { Application } from "@hotwired/stimulus";
-import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
 
-const application = Application.start();
-const context = require.context("./controllers", true, /\.ts$/);
-application.load(definitionsFromContext(context));
+import HelloController from "./controllers/hello_controller";
+import RemovableController from "./controllers/removable_controller";
+import ToggleController from "./controllers/toggle_controller";
+
+declare global {
+  interface Window {
+    Stimulus: any;
+  }
+}
+
+let Stimulus = (window.Stimulus = Application.start());
+Stimulus.register("hello", HelloController);
+Stimulus.register("toggle", ToggleController);
+Stimulus.register("removable", RemovableController);

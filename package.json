@@ -3,7 +3,6 @@
   "private": true,
   "dependencies": {
     "@hotwired/stimulus": "^3.0.0",
-    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@rails/ujs": "^6.1.4",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.4",
@@ -25,7 +24,6 @@
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
-    "@types/webpack-env": "^1.16.2",
     "browser-sync": "^2.27.5",
     "prettier": "^2.4.1",
     "resolve-url-loader": "4.0.0",
