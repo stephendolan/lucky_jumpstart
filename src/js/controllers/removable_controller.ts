@@ -1,4 +1,4 @@
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 // This controller adds the ability to remove any arbitrary object in the DOM.
 export default class extends Controller {
