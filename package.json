@@ -24,7 +24,7 @@
     "@types/node": "^16.10.2",
     "@types/webpack-env": "^1.16.2",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "browser-sync": "^2.27.5",
     "compression-webpack-plugin": "^9.0.0",
     "eslint": "^7.32.0",
