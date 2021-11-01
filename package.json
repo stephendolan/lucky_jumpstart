@@ -20,7 +20,7 @@
     "prod": "yarn run mix --production"
   },
   "devDependencies": {
-    "@babel/compat-data": "^7.15.0",
+    "@babel/compat-data": "^7.16.0",
     "@types/node": "^16.11.6",
     "@types/webpack-env": "^1.16.3",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
