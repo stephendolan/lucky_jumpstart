@@ -20,7 +20,7 @@ jobs:
         run: crystal tool format --check
 
       - name: Set up Crystal cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         id: crystal-cache
         with:
           path: |
@@ -66,13 +66,13 @@ jobs:
           crystal: 1.1.0
 
       - name: Set up Yarn cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Set up Crystal cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         id: crystal-cache
         with:
           path: |
