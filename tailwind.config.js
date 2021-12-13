@@ -2,12 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: {
-    content: ["./src/**/*.css", "./src/**/*.cr", "./src/**/*.ts"],
-    options: {},
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.css", "./src/**/*.cr", "./src/**/*.ts"],
   theme: {
     extend: {
       colors: {
@@ -17,9 +12,6 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require("@tailwindcss/forms"),

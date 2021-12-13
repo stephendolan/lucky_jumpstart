@@ -14,7 +14,7 @@ class Shared::FlashMessages < BaseComponent
                 span flash_message
               end
             end
-            div class: "order-2 flex-shrink-0 sm:order-3 sm:ml-3" do
+            div class: "order-2 shrink-0 sm:order-3 sm:ml-3" do
               button data_action: "click->removable#remove", class: "-mr-1 flex p-2 rounded-md hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2", type: "button" do
                 span "Dismiss", class: "sr-only"
                 tag "svg", aria_hidden: "true", class: "h-6 w-6 text-white", fill: "none", stroke: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" do
