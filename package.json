@@ -2,15 +2,15 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@hotwired/stimulus": "^3.0.0",
+    "@hotwired/stimulus": "^3.0.1",
     "@rails/ujs": "^6.1.4",
-    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.6",
     "esbuild": "^0.13.3",
-    "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.16",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^2.2.19",
     "turbolinks": "^5.2.0"
   },
   "scripts": {
@@ -24,11 +24,11 @@
     "prod": "yarn prod:js && yarn prod:css"
   },
   "devDependencies": {
-    "@types/node": "^16.10.2",
-    "browser-sync": "^2.27.5",
-    "prettier": "^2.4.1",
+    "@types/node": "^16.11.12",
+    "browser-sync": "^2.27.7",
+    "prettier": "^2.5.1",
     "resolve-url-loader": "4.0.0",
     "tailwindcss-font-inter": "^3.0.0",
-    "typescript": "^4.4.2"
+    "typescript": "^4.5.3"
   }
 }
