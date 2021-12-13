@@ -26,7 +26,7 @@ class Shared::Navbar < BaseComponent
 
   private def render_left_navbar
     div class: "flex" do
-      div class: "flex-shrink-0 flex items-center" do
+      div class: "shrink-0 flex items-center" do
         render_logo
       end
     end
