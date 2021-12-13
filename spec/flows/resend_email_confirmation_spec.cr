@@ -1,6 +1,6 @@
 require "../spec_helper"
 
-describe "Resend confirmation flow" do
+describe "Resend confirmation flow", tags: "flow" do
   it "works for an unconfirmed user" do
     user = UserFactory.create &.confirmed_at(nil)
     flow = ResendEmailConfirmationFlow.new(user)
