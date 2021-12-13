@@ -17,6 +17,10 @@ class Jumpstart::Init
     Spark.reset_indentation
     prompt.newline
 
+    prompt.say "#{bullet_list_icon} Next, we'll remove the original GitHub sponsorship info. If you want to support the project, head to https://github.com/sponsors/stephendolan.", color: :light_cyan
+    Spark::File.remove_file(".github/FUNDING.yml")
+    prompt.newline
+
     if prompt.yes?("#{bullet_list_icon} Would you like to set up a git pre-commit hook with Ameba and the Crystal Formatter?", color: :light_cyan)
       Spark.indent
       prompt.say "Great, we'll get those copied over now...", color: :white
