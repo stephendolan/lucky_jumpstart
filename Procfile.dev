@@ -1,4 +1,5 @@
 system_check: script/system_check && sleep 100000
 web: lucky watch --reload-browser
-assets: yarn watch
+js_assets: yarn watch:js
+css_assets: yarn watch:css
 docker: docker-compose up

@@ -14,7 +14,7 @@ abstract class MainLayout
     html lang: "en" do
       mount Shared::LayoutHead, page_title: page_title
 
-      body class: "min-h-screen bg-gray-100" do
+      body class: "font-inter min-h-screen bg-gray-100" do
         mount Shared::Navbar, user: current_user
         mount Shared::FlashMessages, context.flash
 
