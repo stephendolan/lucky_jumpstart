@@ -14,7 +14,7 @@ jobs:
 
       - uses: oprypin/install-crystal@v1
         with:
-          crystal: 1.1.0
+          crystal: latest
 
       - name: Format
         run: crystal tool format --check
@@ -44,6 +44,18 @@ jobs:
     env:
       LUCKY_ENV: test
 
+    strategy:
+      fail-fast: true
+      matrix:
+        crystal_version:
+          - 1.2.0
+          - latest
+        experimental:
+          - false
+        include:
+          - crystal_version: nightly
+            experimental: true
+
     services:
       postgres:
         image: postgres:12-alpine
@@ -63,7 +75,7 @@ jobs:
 
       - uses: oprypin/install-crystal@v1
         with:
-          crystal: 1.1.0
+          crystal: ${{ matrix.crystal_version }}
 
       - name: Set up Yarn cache
         uses: actions/cache@v2.1.7
@@ -79,7 +91,7 @@ jobs:
             ~/.cache/crystal
             bin/ameba
             lib
-          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock') }}
+          key: ${{ runner.os }}-crystal-${{ matrix.crystal_version }}-${{ hashFiles('**/shard.lock') }}
           restore-keys: |
             ${{ runner.os }}-crystal-
 
