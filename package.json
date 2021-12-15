@@ -28,7 +28,7 @@
     "browser-sync": "^2.27.7",
     "prettier": "^2.5.1",
     "resolve-url-loader": "4.0.0",
-    "tailwindcss-font-inter": "^3.0.0",
+    "tailwindcss-font-inter": "^3.0.1",
     "typescript": "^4.5.4"
   }
 }
