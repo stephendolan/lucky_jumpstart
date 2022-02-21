@@ -24,7 +24,7 @@
     "prod": "yarn prod:js && yarn prod:css"
   },
   "devDependencies": {
-    "@types/node": "^17.0.18",
+    "@types/node": "^17.0.19",
     "browser-sync": "^2.27.7",
     "prettier": "^2.5.1",
     "resolve-url-loader": "5.0.0",
