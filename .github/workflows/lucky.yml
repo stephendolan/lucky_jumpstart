@@ -1,6 +1,7 @@
 name: Lucky App CI
 
 on:
+  workflow_call:
   push:
     branches:
       - main
