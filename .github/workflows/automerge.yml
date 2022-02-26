@@ -1,6 +1,7 @@
 name: Auto-merge
 
 on:
+  workflow_call:
   workflow_run:
     types:
       - completed
