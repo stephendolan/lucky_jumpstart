@@ -3,7 +3,7 @@ FROM crystallang/crystal:1.3.2-alpine as crystal_dependencies
 ENV LUCKY_ENV=production
 ENV SKIP_LUCKY_TASK_PRECOMPILATION=1
 WORKDIR /shards
-COPY shard.yml shard.override.yml shard.lock ./
+COPY shard.yml shard.lock ./
 RUN  shards install --production
 
 # Install the application Yarn dependencies, then compile production CSS/JS
