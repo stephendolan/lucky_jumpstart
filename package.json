@@ -8,7 +8,7 @@
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.4",
-    "esbuild": "^0.14.36",
+    "esbuild": "^0.14.37",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24",
     "turbolinks": "^5.2.0"
