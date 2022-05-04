@@ -27,7 +27,7 @@ There are quite a few things I find myself adding to every Lucky application out
 
 #### Tooling
 
-- 💨 &nbsp; [TailwindCSS 2.0](https://tailwindcss.com) for better styling
+- 💨 &nbsp; [TailwindCSS](https://tailwindcss.com) for better styling
 - 🖋 &nbsp; [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin) for prose
 - 📝 &nbsp; [Tailwind Forms](https://github.com/tailwindlabs/tailwindcss-forms) to make styling forms easier
 - 🖥 &nbsp; [Tailwind Aspect Ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio) for setting fixed aspect ratios
