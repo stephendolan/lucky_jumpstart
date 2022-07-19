@@ -14,6 +14,11 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Crystal Ameba Linter
+        uses: crystal-ameba/github-action@v0.3.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: crystal-lang/install-crystal@v1
         with:
@@ -21,25 +26,6 @@ jobs:
 
       - name: Format
         run: crystal tool format --check
-
-      - name: Set up Crystal cache
-        uses: actions/cache@v3
-        id: crystal-cache
-        with:
-          path: |
-            ~/.cache/crystal
-            bin/ameba
-            lib
-          key: ${{ runner.os }}-crystal-${{ hashFiles('**/shard.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-crystal-
-
-      - name: Install shards
-        if: steps.crystal-cache.outputs.cache-hit != 'true'
-        run: shards check || shards install --frozen
-
-      - name: Run ameba linter
-        run: ./bin/ameba
 
   RunSpecs:
     runs-on: ubuntu-latest
