@@ -8,17 +8,26 @@ on:
   pull_request:
 
 jobs:
-  CheckFormat:
+  AmebaLinterCheck:
+    runs-on: ubuntu-latest
+
+    container:
+      image: crystallang/crystal
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Crystal Ameba Linter
+      id: crystal-ameba
+      uses: crystal-ameba/github-action@v0.3.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+  CrystalFormatterCheck:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Crystal Ameba Linter
-        uses: crystal-ameba/github-action@v0.3.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: crystal-lang/install-crystal@v1
         with:
