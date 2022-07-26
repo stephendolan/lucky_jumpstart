@@ -12,16 +12,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
-    container:
-      image: crystallang/crystal
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Crystal Ameba Linter
-        id: crystal-ameba
-        uses: crystal-ameba/github-action@v0.3.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     - uses: actions/checkout@v3
+
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: latest
+
+      - name: Set up Crystal cache
+        uses: actions/cache@v3
+        id: crystal-cache
+        with:
+          path: |
+            ~/.cache/crystal
+            bin/ameba
+            lib
+          key: ${{ runner.os }}-ameba-${{ hashFiles('**/shard.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-ameba-
+
+      - name: Install shards
+        if: steps.crystal-cache.outputs.cache-hit != 'true'
+        run: shards check || shards install
+
+      - name: Run Ameba
+        run: ./bin/ameba
 
   CrystalFormatterCheck:
     runs-on: ubuntu-latest
