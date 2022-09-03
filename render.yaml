@@ -9,7 +9,7 @@ services:
     name: Lucky Jumpstart
     env: docker
     dockerfilePath: "./dockerfiles/webserver.Dockerfile"
-    healthCheckPath: /
+    healthCheckPath: /ping
     envVars:
       - key: DATABASE_URL
         fromDatabase:
