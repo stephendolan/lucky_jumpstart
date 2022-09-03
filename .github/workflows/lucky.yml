@@ -54,6 +54,7 @@ jobs:
 
   RunSpecs:
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
     timeout-minutes: 30
 
     env:
@@ -65,7 +66,7 @@ jobs:
         crystal_version:
           - 1.4.1
           - latest
-        experimental:
+        experimental: 
           - false
         include:
           - crystal_version: nightly
