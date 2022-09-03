@@ -23,5 +23,3 @@ services:
         sync: false
       - key: SECRET_KEY_BASE
         sync: false
-      - key: SEND_GRID_KEY
-        sync: false
