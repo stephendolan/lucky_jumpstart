@@ -18,5 +18,7 @@ updates:
       interval: daily
       time: "10:00"
     open-pull-requests-limit: 5
+    ignore:
+      dependency-name: @types/*
     target-branch: main
     versioning-strategy: increase
