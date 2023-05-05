@@ -17,7 +17,7 @@ jobs:
 
       - uses: crystal-lang/install-crystal@v1
         with:
-          crystal: 1.4
+          crystal: latest
 
       - name: Set up Crystal cache
         uses: actions/cache@v3
@@ -64,9 +64,8 @@ jobs:
       fail-fast: true
       matrix:
         crystal_version:
-          - 1.4.1
           - latest
-        experimental: 
+        experimental:
           - false
         include:
           - crystal_version: nightly
