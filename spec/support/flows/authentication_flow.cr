@@ -37,19 +37,19 @@ class AuthenticationFlow < BaseFlow
   end
 
   def should_be_signed_in
-    current_page.should have_element(sign_out_button)
+    current_page.should have_element("@nav-sign-out-button")
   end
 
   def should_be_on_sign_in_page
-    current_page.should have_element(el("body", text: "Sign in"))
+    current_page.should have_element("body", text: "Sign in")
   end
 
   def should_have_password_error
-    current_page.should have_element(el("body", text: "Password is wrong"))
+    current_page.should have_element("body", text: "Password is wrong")
   end
 
   def should_have_confirmation_error
-    current_page.should have_element(el("body", text: "Email is not confirmed"))
+    current_page.should have_element("body", text: "Email is not confirmed")
   end
 
   private def sign_out_button
