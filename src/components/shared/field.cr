@@ -35,7 +35,7 @@ class Shared::Field(T) < BaseComponent
   needs attribute : Avram::PermittedAttribute(T)
   needs label_text : String?
 
-  def render
+  def render(&)
     div do
       mount Shared::FieldLabel, attribute, label_text
 

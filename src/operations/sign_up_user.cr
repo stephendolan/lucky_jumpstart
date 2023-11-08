@@ -10,7 +10,7 @@ class SignUpUser < User::SaveOperation
   before_save do
     validate_uniqueness_of email
     assign_confirmation_token
-    Authentic.copy_and_encrypt password, to: encrypted_password
+    Authentic.copy_and_encrypt(password, to: encrypted_password) if password.valid?
   end
 
   after_commit send_confirmation_email
