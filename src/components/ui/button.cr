@@ -12,7 +12,7 @@ class UI::Button < BaseComponent
 
   needs size : Size = Size::Medium
 
-  def render
+  def render(&)
     span class: "inline-flex rounded-md shadow-sm" do
       tag_defaults class: "#{button_classes} #{size_classes}" do |button_builder|
         yield button_builder

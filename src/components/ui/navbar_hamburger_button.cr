@@ -9,7 +9,7 @@ class UI::NavbarHamburgerButton < BaseComponent
   BUTTON_BORDER_HOVER = "border-gray-300"
   BUTTON_BORDER_FOCUS = "border-gray-300"
 
-  def render
+  def render(&)
     tag_defaults class: button_classes do |button_builder|
       yield button_builder
     end
