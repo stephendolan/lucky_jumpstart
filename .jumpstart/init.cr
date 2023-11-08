@@ -6,9 +6,21 @@ class Jumpstart::Init
   getter default_programmatic_app_name : String = "lucky_jumpstart"
   getter default_human_app_name : String = "Lucky Jumpstart"
 
+  INSTALLED_LUCKY_VERSION = {{ `shards list | grep "lucky " | head -n 1 | sed -nE 's/.*\\(([^)]+)\\).*/\\1/p'`.stringify }}
+
   def call
     prompt.say "🚀 Welcome to #{default_human_app_name}!", color: :yellow, style: :bold
     prompt.newline
+
+    prompt.say "Note that I'm not actively maintaining this repository. Make sure you're okay with Lucky version #{INSTALLED_LUCKY_VERSION}.", color: :yellow, style: :bold
+    prompt.newline
+
+    if prompt.yes?("Would you like to continue?", color: :light_cyan)
+      prompt.say "Great! Let's get started.", color: :white
+    else
+      prompt.say "No worries! Thanks for checking out the project.", color: :white
+      exit
+    end
 
     prompt.say "#{bullet_list_icon} Let's start by renaming a few things in the starter application.", color: :light_cyan
     Spark.indent
