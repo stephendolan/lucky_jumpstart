@@ -1,7 +1,7 @@
 class Users::FormFields < BaseComponent
   needs operation : SaveUserSettings
 
-  def render(&)
+  def render
     div class: "mt-6 grid grid-cols-12 gap-6" do
       if user = operation.record
         div class: "col-span-12" do
