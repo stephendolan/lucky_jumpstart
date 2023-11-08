@@ -2,7 +2,7 @@
 
 This is a template project for web applications using [Lucky](https://luckyframework.org).
 
-![Lucky Jumpstart CI](https://github.com/stephendolan/lucky_jumpstart/workflows/Lucky%20Jumpstart%20CI/badge.svg)
+[![Lucky App CI](https://github.com/stephendolan/lucky_jumpstart/actions/workflows/lucky.yml/badge.svg)](https://github.com/stephendolan/lucky_jumpstart/actions/workflows/lucky.yml)
 
 ### How to use it?
 
