@@ -20,7 +20,7 @@ jobs:
           crystal: latest
 
       - name: Set up Crystal cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: crystal-cache
         with:
           path: |
@@ -93,13 +93,13 @@ jobs:
           crystal: ${{ matrix.crystal_version }}
 
       - name: Set up Yarn cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Set up Crystal cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: crystal-cache
         with:
           path: |
